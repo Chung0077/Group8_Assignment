@@ -10,7 +10,7 @@ public class ArrowRotation : MonoBehaviour
     private void FixedUpdate()
     {
         transform.forward =
-            Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.fixedDeltaTime);
+            Vector3.Slerp(transform.forward, rb.velocity.normalized, Time.fixedDeltaTime*5);
     }
 
 }
