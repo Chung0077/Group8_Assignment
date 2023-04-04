@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3969128394980924622}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: End_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3859128440119829689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MidPointParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3108845700749782566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: AttachPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6287556519500938149}
   - component: {fileID: 6454061537079841282}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StringgMidPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 8863893354911896435}
   - component: {fileID: 6694063472401508281}
   - component: {fileID: 3244038315646257084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bow_Evil (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1583563504466521354}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: String
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -281,7 +281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2881601163942200884}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: End_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6770974958965707167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BowPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}

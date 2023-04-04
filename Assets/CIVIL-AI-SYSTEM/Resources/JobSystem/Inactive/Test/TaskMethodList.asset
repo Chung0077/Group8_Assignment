@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeaaaf557378ad748946d17a2f4352c3, type: 3}
+  m_Name: TaskMethodList
+  m_EditorClassIdentifier: 
+  methods:
+  - id: 36b9814d-b560-4a42-a91d-c7711a71c6a9
+    nodeConnection:
+    - guid: fb2e2201-f6fb-4e24-bf7d-95996c9a3516
+      requirementData:
+        id: 0
+    - guid: 326c27ec-b830-4c36-9292-15d7c1bb78e2
+      requirementData:
+        id: 1
+    iterator: 0
+    globalWeighting: 1
+    localWeighting: 1
+    name: New Method
+    desc: testing
+  - id: 02eac682-7477-46df-b4bc-2865375af98f
+    nodeConnection:
+    - guid: d682caa1-a253-4b04-baf3-c92d892b1a96
+      requirementData:
+        id: 2
+    iterator: 0
+    globalWeighting: 1
+    localWeighting: 1
+    name: New Method
+    desc: testing
+  references:
+    version: 1
+    00000000:
+      type: {class: , ns: , asm: }
+    00000001:
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 326c27ec-b830-4c36-9292-15d7c1bb78e2
+        customAnimation: {fileID: 0}
+        waitTime: 5
+    00000002:
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: d682caa1-a253-4b04-baf3-c92d892b1a96
+        customAnimation: {fileID: 5539831331247536789, guid: 98f277b0c8055e143b2fcf058d3c27dc,
+          type: 3}
+        waitTime: 5

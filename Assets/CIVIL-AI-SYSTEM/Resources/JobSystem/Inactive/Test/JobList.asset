@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030a8dfedcfd58d45bed6dedbca2fbda, type: 3}
+  m_Name: JobList
+  m_EditorClassIdentifier: 
+  jobs:
+  - id: c1456863-4574-4a0b-ae71-2777dbb7c466
+    nodeConnection:
+    - guid: 5e7260fb-2fd3-478a-9ad5-1727527f3f2b
+      requirementData:
+        id: 0
+    iterator: 0
+    globalWeighting: 1
+    localWeighting: 1
+    name: Woodcutter
+    desc: Desc
+    startTime: 0
+    endTime: 2400
+    weighting: 0.7
+    useGlobals: 1
+    checkIn: 1
+  references:
+    version: 1
+    00000000:
+      type: {class: , ns: , asm: }
