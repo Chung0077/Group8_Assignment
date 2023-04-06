@@ -5,17 +5,26 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arrow
+  - Car
+  - Terrain
+  - Train
+  - Crosswalk
+  - Human
+  - LevelCrossing
+  - TrafficLight
+  - TrafficLightCrosswalk
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Bow
+  - Player
   - Water
   - UI
   - Arrow
-  - 
-  - 
-  - 
+  - Obstacle
+  - Civil
+  - Resource
   - 
   - 
   - 

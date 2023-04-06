@@ -5,6 +5,7 @@ namespace AISystem
     {
         NULL,
         FOOD,
-        SLEEP
+        SLEEP,
+        SIT
     }
 }

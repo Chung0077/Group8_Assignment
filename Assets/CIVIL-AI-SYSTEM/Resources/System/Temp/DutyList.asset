@@ -17,10 +17,10 @@ MonoBehaviour:
     nodeConnection:
     - guid: 1ddf66da-a6c6-4a21-a841-1e75a8dc8433
       requirementData:
-        id: 0
+        rid: -2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
+    globalWeighting: 0
+    localWeighting: 0
     name: Go Fishing
     desc: 
     weighting: 0
@@ -28,10 +28,10 @@ MonoBehaviour:
     nodeConnection:
     - guid: ce14d475-15aa-4571-8330-6c14ac85bf4f
       requirementData:
-        id: 0
+        rid: -2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
+    globalWeighting: 0
+    localWeighting: 0
     name: Collect Wood
     desc: 
     weighting: 0
@@ -39,10 +39,10 @@ MonoBehaviour:
     nodeConnection:
     - guid: 50b05fa3-04c7-4471-a529-6d602835ea63
       requirementData:
-        id: 0
+        rid: -2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
+    globalWeighting: 0
+    localWeighting: 0
     name: Saw Wood
     desc: 
     weighting: 0
@@ -50,10 +50,10 @@ MonoBehaviour:
     nodeConnection:
     - guid: 4162e010-226c-4f26-9bbf-f60c998715ba
       requirementData:
-        id: 0
+        rid: -2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
+    globalWeighting: 0
+    localWeighting: 0
     name: Collect Raw Wood
     desc: 
     weighting: 0
@@ -61,14 +61,15 @@ MonoBehaviour:
     nodeConnection:
     - guid: b9a7d24c-29f0-4247-a5a0-97f16e5049e5
       requirementData:
-        id: 0
+        rid: -2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
+    globalWeighting: 0
+    localWeighting: 0
     name: Sell Fish
     desc: 
     weighting: 0
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

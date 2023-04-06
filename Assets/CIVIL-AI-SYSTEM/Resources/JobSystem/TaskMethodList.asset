@@ -28,8 +28,6 @@ MonoBehaviour:
       requirementData:
         id: 2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
     name: Via lake
     desc: testing
   - id: c6a83052-4110-4811-9105-b6d6b9c164e4
@@ -50,8 +48,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Small Tree with Axe
     desc: testing
   - id: c327902a-11bd-4249-9622-20332480daf3
@@ -74,9 +70,7 @@ MonoBehaviour:
     - guid: 39575eb1-9ffe-4598-a2dd-dc01723a9e5d
       requirementData:
         id: 6
-    iterator: 4
-    globalWeighting: 0.75
-    localWeighting: 0.75
+    iterator: 0
     name: From Store
     desc: testing
   - id: 96130bd8-e3ed-4c40-9ac1-b8f47e43d0ef
@@ -93,26 +87,19 @@ MonoBehaviour:
     - guid: 7f400e26-324a-4cba-b1ec-3f2f3301adf0
       requirementData:
         id: 0
-    iterator: 4
-    globalWeighting: 0.75
-    localWeighting: 0.75
+    iterator: 0
     name: From Woodcutter
     desc: testing
   - id: ed60e352-6c66-43eb-bf8b-d36941efc12d
     nodeConnection:
-    - guid: 0eaf7902-7327-4984-b397-0972ccfb5835
-      requirementData:
-        id: 0
-    - guid: ca7e8b62-b81c-4fbb-a6e5-7e90c3fcbc64
+    - guid: 4891e71c-b8e7-4088-b898-d07ebcffc613
       requirementData:
         id: 0
     - guid: 5ed5262d-7d8e-427c-8afd-d9858dc4a424
       requirementData:
         id: 7
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
-    name: From Counter
+    name: New Method
     desc: testing
   references:
     version: 1

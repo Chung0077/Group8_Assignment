@@ -19,8 +19,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.338
     name: Collect Fish
     desc: testing
   - id: ce14d475-15aa-4571-8330-6c14ac85bf4f
@@ -29,8 +27,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Find Tree and cut down
     desc: testing
   - id: 50b05fa3-04c7-4471-a529-6d602835ea63
@@ -39,8 +35,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Process Wood
     desc: testing
   - id: 4162e010-226c-4f26-9bbf-f60c998715ba
@@ -49,8 +43,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Get Wood
     desc: testing
   - id: b9a7d24c-29f0-4247-a5a0-97f16e5049e5
@@ -59,8 +51,6 @@ MonoBehaviour:
       requirementData:
         id: 0
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.338
     name: Sell from Store
     desc: testing
   references:

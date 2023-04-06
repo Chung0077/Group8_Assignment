@@ -22,30 +22,22 @@ MonoBehaviour:
       requirementData:
         id: 1
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
     name: Fishermen
     desc: stuff
-    startTime: 1100
-    endTime: 1800
-    weighting: 0
+    startTime: 600
+    endTime: 1500
     useGlobals: 1
-    checkIn: 0
   - id: ae5bb08e-5860-4a9e-b9d1-f7cd95263adf
     nodeConnection:
     - guid: 79005886-eb1e-485e-b284-df706db57564
       requirementData:
         id: 2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Woodcutter
     desc: stuff
     startTime: 800
     endTime: 1700
-    weighting: 0
     useGlobals: 1
-    checkIn: 1
   - id: 466209d6-aaf4-466c-8f50-45ac013290f9
     nodeConnection:
     - guid: b240fbde-e4e6-4693-a96b-5bed4bc8a571
@@ -55,15 +47,11 @@ MonoBehaviour:
       requirementData:
         id: 2
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
     name: Sawmill Worker
     desc: stuff
     startTime: 1000
-    endTime: 1700
-    weighting: 0
+    endTime: 1800
     useGlobals: 1
-    checkIn: 1
   references:
     version: 1
     00000000:
@@ -72,8 +60,8 @@ MonoBehaviour:
         connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
         timeWindow:
           enabled: 1
-          startTime: 1100
-          endTime: 1500
+          startTime: 600
+          endTime: 1200
         itemNeeded: 0
         workPlaceStateRequirment:
           numberOfWorkers: 0
@@ -82,8 +70,6 @@ MonoBehaviour:
             id: 
             nodeConnection: []
             iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
           enabled: 0
         nodeLevel: 0
     00000001:
@@ -92,8 +78,8 @@ MonoBehaviour:
         connectedNodeID: a78faa46-ed08-407a-820c-26ed95af5ced
         timeWindow:
           enabled: 1
-          startTime: 1500
-          endTime: 1800
+          startTime: 1200
+          endTime: 1300
         itemNeeded: 0
         workPlaceStateRequirment:
           numberOfWorkers: 0
@@ -102,8 +88,6 @@ MonoBehaviour:
             id: 
             nodeConnection: []
             iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
           enabled: 0
         nodeLevel: 0
     00000002:
@@ -124,7 +108,5 @@ MonoBehaviour:
             id: 
             nodeConnection: []
             iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
           enabled: 0
         nodeLevel: 0
