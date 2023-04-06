@@ -17,28 +17,34 @@ MonoBehaviour:
     nodeConnection:
     - guid: d5134573-86b2-412c-84bf-1243e953fe88
       requirementData:
-        rid: 7100791379021529093
+        rid: 7100791380638171668
+    - guid: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
+      requirementData:
+        rid: 7100791380638171669
+    - guid: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
+      requirementData:
+        rid: 7100791380638171670
     iterator: 0
     globalWeighting: 0
     localWeighting: 0
     name: Walker
     desc: stuff
-    startTime: 600
-    endTime: 1500
+    startTime: 0
+    endTime: 2400
     weighting: 0
     useGlobals: 1
-    checkIn: 0
+    checkIn: 1
   references:
     version: 2
     RefIds:
-    - rid: 7100791379021529093
+    - rid: 7100791380638171668
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
         timeWindow:
-          enabled: 1
-          startTime: 600
-          endTime: 1200
+          enabled: 0
+          startTime: 0
+          endTime: 2400
         itemNeeded: 0
         workPlaceStateRequirment:
           numberOfWorkers: 0
@@ -49,5 +55,45 @@ MonoBehaviour:
             iterator: 0
             globalWeighting: 0
             localWeighting: 0
+          enabled: 1
+        nodeLevel: 0
+    - rid: 7100791380638171669
+      type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
+        timeWindow:
           enabled: 0
+          startTime: 0
+          endTime: 2400
+        itemNeeded: 0
+        workPlaceStateRequirment:
+          numberOfWorkers: 1
+          operatorForWorkplaceState: -2
+          subNode:
+            id: 
+            nodeConnection: []
+            iterator: 0
+            globalWeighting: 0
+            localWeighting: 0
+          enabled: 1
+        nodeLevel: 0
+    - rid: 7100791380638171670
+      type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
+        timeWindow:
+          enabled: 0
+          startTime: 0
+          endTime: 2400
+        itemNeeded: 0
+        workPlaceStateRequirment:
+          numberOfWorkers: 1
+          operatorForWorkplaceState: -2
+          subNode:
+            id: 
+            nodeConnection: []
+            iterator: 0
+            globalWeighting: 0
+            localWeighting: 0
+          enabled: 1
         nodeLevel: 0

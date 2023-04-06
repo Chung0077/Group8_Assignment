@@ -24,6 +24,28 @@ MonoBehaviour:
     name: Go Walking
     desc: 
     weighting: 0
+  - id: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
+    nodeConnection:
+    - guid: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
+      requirementData:
+        rid: -2
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0
+    name: Go Dancing
+    desc: 
+    weighting: 0
+  - id: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
+    nodeConnection:
+    - guid: 0b886df7-bf05-432f-bcd5-a40dae13a348
+      requirementData:
+        rid: -2
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0
+    name: Go Talking
+    desc: 
+    weighting: 0
   references:
     version: 2
     RefIds:

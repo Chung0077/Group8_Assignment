@@ -22,11 +22,11 @@ MonoBehaviour:
     itemsNeeded: 0
     itemType: 0
     itemOutput: {fileID: 0}
-    LookAt: 0
+    LookAt: 3
     ownershipMode: 0
     SetItemInUse: 1
     NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
+    UpdateEachLoop: 1
   - id: 362d8bb2-338c-41ef-99c4-bc017e71958d
     nodeConnection: []
     iterator: 0

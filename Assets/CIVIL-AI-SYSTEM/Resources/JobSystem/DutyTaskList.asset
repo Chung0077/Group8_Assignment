@@ -18,9 +18,23 @@ MonoBehaviour:
     - guid: dd7f4d28-2b2b-4bcb-ad95-9ca0c6048e80
       requirementData:
         rid: -2
+    iterator: 1
+    globalWeighting: 0
+    localWeighting: 0
+    name: Go to area
+    desc: testing
+  - id: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
+    nodeConnection:
     - guid: bc8854fb-9477-48fe-9a18-66038fca4988
       requirementData:
         rid: -2
+    iterator: 1
+    globalWeighting: 0
+    localWeighting: 0
+    name: Go to area
+    desc: testing
+  - id: 0b886df7-bf05-432f-bcd5-a40dae13a348
+    nodeConnection:
     - guid: 9ce26aff-23a9-43c4-9aca-ecbf113e7c0f
       requirementData:
         rid: -2
