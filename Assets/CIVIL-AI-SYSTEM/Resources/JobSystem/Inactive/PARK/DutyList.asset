@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5143c0eccbd5a264cae2363e55042607, type: 3}
+  m_Name: DutyList
+  m_EditorClassIdentifier: 
+  duties:
+  - id: d5134573-86b2-412c-84bf-1243e953fe88
+    nodeConnection:
+    - guid: 1ddf66da-a6c6-4a21-a841-1e75a8dc8433
+      requirementData:
+        rid: -2
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0
+    name: Go Walking
+    desc: 
+    weighting: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
