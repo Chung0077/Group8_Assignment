@@ -21,51 +21,7 @@ MonoBehaviour:
     iterator: 0
     globalWeighting: 0
     localWeighting: 0
-    name: Go Fishing
-    desc: 
-    weighting: 0
-  - id: 79005886-eb1e-485e-b284-df706db57564
-    nodeConnection:
-    - guid: ce14d475-15aa-4571-8330-6c14ac85bf4f
-      requirementData:
-        rid: -2
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
-    name: Collect Wood
-    desc: 
-    weighting: 0
-  - id: b240fbde-e4e6-4693-a96b-5bed4bc8a571
-    nodeConnection:
-    - guid: 50b05fa3-04c7-4471-a529-6d602835ea63
-      requirementData:
-        rid: -2
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
-    name: Saw Wood
-    desc: 
-    weighting: 0
-  - id: 1fe09ffc-0b74-44ab-9ef3-b1b031cfc10e
-    nodeConnection:
-    - guid: 4162e010-226c-4f26-9bbf-f60c998715ba
-      requirementData:
-        rid: -2
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
-    name: Collect Raw Wood
-    desc: 
-    weighting: 0
-  - id: a78faa46-ed08-407a-820c-26ed95af5ced
-    nodeConnection:
-    - guid: b9a7d24c-29f0-4247-a5a0-97f16e5049e5
-      requirementData:
-        rid: -2
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
-    name: Sell Fish
+    name: Go walking
     desc: 
     weighting: 0
   references:
