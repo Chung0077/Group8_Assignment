@@ -3,6 +3,8 @@ namespace AISystem.Civil
 	 public enum CIVIL_JOBS
 	 {
 		NONE,
-		WALKER,
+		FISHERMEN,
+		WOODCUTTER,
+		SAWMILL_WORKER,
 	 }
 }

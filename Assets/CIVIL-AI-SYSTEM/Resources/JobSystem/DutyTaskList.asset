@@ -17,17 +17,43 @@ MonoBehaviour:
     nodeConnection:
     - guid: dd7f4d28-2b2b-4bcb-ad95-9ca0c6048e80
       requirementData:
-        rid: -2
-    - guid: 383cb923-592c-4023-8bde-5407623db7ef
-      requirementData:
-        rid: -2
+        id: 0
     iterator: 1
-    globalWeighting: 0
-    localWeighting: 0
-    name: 
+    name: Collect Fish
+    desc: testing
+  - id: ce14d475-15aa-4571-8330-6c14ac85bf4f
+    nodeConnection:
+    - guid: c6a83052-4110-4811-9105-b6d6b9c164e4
+      requirementData:
+        id: 0
+    iterator: 1
+    name: Find Tree and cut down
+    desc: testing
+  - id: 50b05fa3-04c7-4471-a529-6d602835ea63
+    nodeConnection:
+    - guid: c327902a-11bd-4249-9622-20332480daf3
+      requirementData:
+        id: 0
+    iterator: 1
+    name: Process Wood
+    desc: testing
+  - id: 4162e010-226c-4f26-9bbf-f60c998715ba
+    nodeConnection:
+    - guid: 96130bd8-e3ed-4c40-9ac1-b8f47e43d0ef
+      requirementData:
+        id: 0
+    iterator: 1
+    name: Get Wood
+    desc: testing
+  - id: b9a7d24c-29f0-4247-a5a0-97f16e5049e5
+    nodeConnection:
+    - guid: ed60e352-6c66-43eb-bf8b-d36941efc12d
+      requirementData:
+        id: 0
+    iterator: 1
+    name: Sell from Store
     desc: testing
   references:
-    version: 2
-    RefIds:
-    - rid: -2
+    version: 1
+    00000000:
       type: {class: , ns: , asm: }
