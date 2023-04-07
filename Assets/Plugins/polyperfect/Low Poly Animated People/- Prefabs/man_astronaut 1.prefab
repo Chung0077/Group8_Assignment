@@ -566,7 +566,7 @@ MonoBehaviour:
   dutyList:
     id: 12da7025-b2b1-4f3c-ab33-18770b7d852f
     nodeConnection: []
-    iterator: 0
+    iterator: 2
     globalWeighting: 0
     localWeighting: 0
     name: 
