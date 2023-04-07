@@ -8,7 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class BowStringController : MonoBehaviour
 {
     [SerializeField]
-    private BowString bowStringRenderer;
+    private List<BowString> bowStringRenderer;
 
     private XRGrabInteractable interactable;
 
@@ -54,7 +54,10 @@ public class BowStringController : MonoBehaviour
         interactor = null;
         midPointGrabObject.localPosition = Vector3.zero;
         midPointVisualObject.localPosition = Vector3.zero;
-        bowStringRenderer.CreateString(null);
+        for (int i = 0; i < bowStringRenderer.Count; i++)
+        {
+            bowStringRenderer[i].CreateString(null);
+        }
 
     }
 
@@ -84,7 +87,10 @@ public class BowStringController : MonoBehaviour
 
             HandlePullingString(midPointLocalZAbs, midPointLocalSpace);
 
-            bowStringRenderer.CreateString(midPointVisualObject.position);
+            for (int i = 0; i < bowStringRenderer.Count; i++)
+            {
+                bowStringRenderer[i].CreateString(midPointVisualObject.position);
+            }
         }
     }
 

@@ -3115,7 +3115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba0460e6155d4c4baa7b18e261c5d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bowStringRenderer: {fileID: 1849137130030773029}
+  bowStringRenderer:
+  - {fileID: 1849137130030773029}
+  - {fileID: 8326340804975146183}
+  - {fileID: 6949947405819139232}
   midPointGrabObject: {fileID: 1849137129298560220}
   midPointVisualObject: {fileID: 1849137129261364672}
   midPointParent: {fileID: 1690090408943008427}
