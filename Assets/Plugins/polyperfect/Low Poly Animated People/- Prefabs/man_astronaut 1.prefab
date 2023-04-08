@@ -688,8 +688,8 @@ MonoBehaviour:
       _values: []
   itemCarried: {fileID: 0}
   rooms: []
-  rightHand: {fileID: 0}
-  leftHand: {fileID: 0}
+  rightHand: {fileID: 4877515918058049702}
+  leftHand: {fileID: 8009738744481043699}
   references:
     version: 2
     RefIds: []

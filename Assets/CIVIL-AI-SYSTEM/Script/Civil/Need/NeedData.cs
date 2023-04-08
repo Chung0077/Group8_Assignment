@@ -37,6 +37,7 @@ namespace AISystem.Civil.NeedSystem
             if (value > range[0])
             {
                 value -= Time.deltaTime * Random.Range(0.75f, 1.25f);
+                //value=(value<=0.1f)?0.1f:value;
             }
         }
 

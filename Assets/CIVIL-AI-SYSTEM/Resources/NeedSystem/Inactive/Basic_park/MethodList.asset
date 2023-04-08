@@ -16,27 +16,29 @@ MonoBehaviour:
     _keys:
     - 8cbf51b5-6d90-4988-89ea-8b66beae7dda
     - a201ea8f-1587-434d-bc80-a714e91a250b
+    - 106f96b1-8548-4e99-83b7-86b7bbe7c26c
+    - 4f609a55-451c-4a78-b0bc-e69f39963ce5
     _values:
     - id: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
       nodeConnection:
       - guid: 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
         requirementData:
           rid: -2
-      - guid: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
+      - guid: ed3111f2-6a65-44df-b950-77ed0950ef08
         requirementData:
-          rid: 2658182799754527045
+          rid: 7100791427439526311
       - guid: 40789853-26f0-4e3a-96e4-74818d67f180
         requirementData:
           rid: -2
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 0.4
       localWeighting: 0
       name: sit on chair
       desc: 
       range:
       - 0
       - 0
-      affect: 500
+      affect: 100
     - id: a201ea8f-1587-434d-bc80-a714e91a250b
       nodeConnection:
       - guid: 384363a3-455d-43e1-abbb-835bae19c868
@@ -44,13 +46,13 @@ MonoBehaviour:
           rid: -2
       - guid: c916f9ba-f688-4f85-b679-5c8d570fc27a
         requirementData:
-          rid: 2658182799754527046
+          rid: 7100791427439526312
       - guid: 61ec38d9-bebb-448b-9ca2-05bce32808c6
         requirementData:
           rid: -2
       - guid: 88859cc1-daba-4db4-a5f3-627a326ac091
         requirementData:
-          rid: 2658182799754527047
+          rid: 7100791427439526313
       iterator: 0
       globalWeighting: 0.5
       localWeighting: 0
@@ -59,30 +61,74 @@ MonoBehaviour:
       range:
       - 0
       - 0
-      affect: 300
+      affect: 150
+    - id: 106f96b1-8548-4e99-83b7-86b7bbe7c26c
+      nodeConnection:
+      - guid: e82a9b19-0701-4baa-a286-d5510fc7d125
+        requirementData:
+          rid: 7100791427439526314
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      name: Wait Food
+      desc: 
+      range:
+      - 0
+      - 0
+      affect: 0
+    - id: 4f609a55-451c-4a78-b0bc-e69f39963ce5
+      nodeConnection:
+      - guid: e068b4ca-e30c-4cd7-9262-0aad1cfdc686
+        requirementData:
+          rid: -2
+      - guid: 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
+        requirementData:
+          rid: -2
+      - guid: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
+        requirementData:
+          rid: -2
+      - guid: 40789853-26f0-4e3a-96e4-74818d67f180
+        requirementData:
+          rid: -2
+      iterator: 0
+      globalWeighting: 0.4
+      localWeighting: 0
+      name: Find other chair
+      desc: 
+      range:
+      - 0
+      - 0
+      affect: 0
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 2658182799754527045
+    - rid: 7100791427439526311
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
-        customAnimation: {fileID: 7400044, guid: d83d395fd464b67438cebe05f5bfd990,
+        connectedNodeID: ed3111f2-6a65-44df-b950-77ed0950ef08
+        customAnimation: {fileID: 7400046, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
-        waitTime: 10
-    - rid: 2658182799754527046
+        waitTime: 5
+    - rid: 7100791427439526312
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: c916f9ba-f688-4f85-b679-5c8d570fc27a
         customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 5
-    - rid: 2658182799754527047
+    - rid: 7100791427439526313
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 88859cc1-daba-4db4-a5f3-627a326ac091
         customAnimation: {fileID: 7400088, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 10
+    - rid: 7100791427439526314
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: e82a9b19-0701-4baa-a286-d5510fc7d125
+        customAnimation: {fileID: 5539831331247536789, guid: 98f277b0c8055e143b2fcf058d3c27dc,
+          type: 3}
+        waitTime: 5

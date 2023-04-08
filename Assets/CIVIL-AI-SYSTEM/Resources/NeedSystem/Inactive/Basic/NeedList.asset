@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
     _keys:
-    - SLEEP
+    - SIT
     - HUNGAR
     _values:
     - id: 318354f4-8670-4373-b6ce-f7e2aed5a3f7
       nodeConnection:
       - guid: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
         requirementData:
-          id: 0
+          rid: 7100791425604517976
       iterator: 0
       globalWeighting: 0
       localWeighting: 0
-      name: SLEEP
+      name: SIT
       desc: 
       weighting:
         nodes:
@@ -49,15 +49,15 @@ MonoBehaviour:
           mode: 0
       range:
       - 0
-      - 1500
+      - 100
     - id: 4a3dee73-644d-4a47-8946-4275f4bdd7e6
       nodeConnection:
       - guid: a201ea8f-1587-434d-bc80-a714e91a250b
         requirementData:
-          id: 0
-      - guid: 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
+          rid: 7100791425604517977
+      - guid: 106f96b1-8548-4e99-83b7-86b7bbe7c26c
         requirementData:
-          id: 1
+          rid: -2
       iterator: 0
       globalWeighting: 0
       localWeighting: 0
@@ -79,20 +79,33 @@ MonoBehaviour:
           mode: 0
       range:
       - 0
-      - 300
+      - 150
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }
-    00000001:
+    - rid: 7100791425604517976
       type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
+        connectedNodeID: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
         band:
-        - 200
-        - 300
+        - 0
+        - 50
         maxBand:
         - 0
-        - 300
+        - 100
+        itemType: 0
+        onlyOwned: 1
+    - rid: 7100791425604517977
+      type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: a201ea8f-1587-434d-bc80-a714e91a250b
+        band:
+        - 0
+        - 100
+        maxBand:
+        - 0
+        - 150
         itemType: 0
         onlyOwned: 1

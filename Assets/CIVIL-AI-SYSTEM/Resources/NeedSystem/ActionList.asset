@@ -21,11 +21,15 @@ MonoBehaviour:
     - 61ec38d9-bebb-448b-9ca2-05bce32808c6
     - 88859cc1-daba-4db4-a5f3-627a326ac091
     - 40789853-26f0-4e3a-96e4-74818d67f180
+    - e82a9b19-0701-4baa-a286-d5510fc7d125
+    - 98b90874-c5ab-4afa-abb9-5f7564757162
+    - e068b4ca-e30c-4cd7-9262-0aad1cfdc686
+    - ed3111f2-6a65-44df-b950-77ed0950ef08
     _values:
     - id: 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
       nodeConnection: []
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 0.4
       localWeighting: 0
       ActionType: 5
       itemsNeeded: 22
@@ -34,18 +38,18 @@ MonoBehaviour:
       LookAt: 0
       ownershipMode: 0
       SetItemInUse: 1
-      NoResetItemOnEnd: 1
+      NoResetItemOnEnd: 0
       UpdateEachLoop: 0
     - id: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
       nodeConnection: []
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 0.4
       localWeighting: 0
       ActionType: 0
       itemsNeeded: 22
-      itemType: 0
+      itemType: 3
       itemOutput: {fileID: 0}
-      LookAt: 0
+      LookAt: 3
       ownershipMode: 0
       SetItemInUse: 1
       NoResetItemOnEnd: 0
@@ -62,8 +66,8 @@ MonoBehaviour:
       LookAt: 3
       ownershipMode: 4
       SetItemInUse: 1
-      NoResetItemOnEnd: 1
-      UpdateEachLoop: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 1
     - id: c916f9ba-f688-4f85-b679-5c8d570fc27a
       nodeConnection: []
       iterator: 0
@@ -74,9 +78,9 @@ MonoBehaviour:
       itemType: 0
       itemOutput: {fileID: 4761635705136645857, guid: 5df453230222fde4292ca3274b96ce41,
         type: 3}
-      LookAt: 3
-      ownershipMode: 0
-      SetItemInUse: 1
+      LookAt: 0
+      ownershipMode: 4
+      SetItemInUse: 0
       NoResetItemOnEnd: 0
       UpdateEachLoop: 0
     - id: 61ec38d9-bebb-448b-9ca2-05bce32808c6
@@ -86,31 +90,73 @@ MonoBehaviour:
       localWeighting: 0
       ActionType: 6
       itemsNeeded: 22
-      itemType: 0
+      itemType: 3
       itemOutput: {fileID: 0}
       LookAt: 0
-      ownershipMode: 1
-      SetItemInUse: 0
+      ownershipMode: 4
+      SetItemInUse: 1
       NoResetItemOnEnd: 0
-      UpdateEachLoop: 0
+      UpdateEachLoop: 1
     - id: 88859cc1-daba-4db4-a5f3-627a326ac091
       nodeConnection: []
       iterator: 0
       globalWeighting: 0.5
       localWeighting: 0
-      ActionType: 13
+      ActionType: 2
       itemsNeeded: 0
-      itemType: 1
+      itemType: 0
       itemOutput: {fileID: 0}
-      LookAt: 4
+      LookAt: 0
       ownershipMode: 0
       SetItemInUse: 0
-      NoResetItemOnEnd: 1
+      NoResetItemOnEnd: 0
       UpdateEachLoop: 0
     - id: 40789853-26f0-4e3a-96e4-74818d67f180
       nodeConnection: []
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 0.4
+      localWeighting: 0
+      ActionType: 5
+      itemsNeeded: 16
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: e82a9b19-0701-4baa-a286-d5510fc7d125
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 0
+      itemsNeeded: 0
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: 98b90874-c5ab-4afa-abb9-5f7564757162
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 7
+      itemsNeeded: 11
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 1
+    - id: e068b4ca-e30c-4cd7-9262-0aad1cfdc686
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0.4
       localWeighting: 0
       ActionType: 7
       itemsNeeded: 0
@@ -119,6 +165,20 @@ MonoBehaviour:
       LookAt: 0
       ownershipMode: 0
       SetItemInUse: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: ed3111f2-6a65-44df-b950-77ed0950ef08
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0.4
+      localWeighting: 0
+      ActionType: 0
+      itemsNeeded: 22
+      itemType: 3
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
       NoResetItemOnEnd: 0
       UpdateEachLoop: 0
   references:
