@@ -17,13 +17,13 @@ MonoBehaviour:
     nodeConnection:
     - guid: d5134573-86b2-412c-84bf-1243e953fe88
       requirementData:
-        rid: 7100791380638171681
+        rid: 7100791414826991622
     - guid: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
       requirementData:
-        rid: 7100791380638171682
+        rid: 7100791414826991623
     - guid: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
       requirementData:
-        rid: 7100791380638171683
+        rid: 7100791414826991624
     iterator: 0
     globalWeighting: 0
     localWeighting: 0
@@ -33,16 +33,16 @@ MonoBehaviour:
     endTime: 2400
     weighting: 0
     useGlobals: 1
-    checkIn: 0
+    checkIn: 1
   references:
     version: 2
     RefIds:
-    - rid: 7100791380638171681
+    - rid: 7100791414826991622
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
         timeWindow:
-          enabled: 0
+          enabled: 1
           startTime: 0
           endTime: 2400
         itemNeeded: 0
@@ -55,14 +55,14 @@ MonoBehaviour:
             iterator: 0
             globalWeighting: 0
             localWeighting: 0
-          enabled: 1
+          enabled: 0
         nodeLevel: 0
-    - rid: 7100791380638171682
+    - rid: 7100791414826991623
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
         timeWindow:
-          enabled: 0
+          enabled: 1
           startTime: 0
           endTime: 2400
         itemNeeded: 0
@@ -75,14 +75,14 @@ MonoBehaviour:
             iterator: 0
             globalWeighting: 0
             localWeighting: 0
-          enabled: 1
+          enabled: 0
         nodeLevel: 0
-    - rid: 7100791380638171683
+    - rid: 7100791414826991624
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
         timeWindow:
-          enabled: 0
+          enabled: 1
           startTime: 0
           endTime: 2400
         itemNeeded: 0
@@ -95,5 +95,5 @@ MonoBehaviour:
             iterator: 0
             globalWeighting: 0
             localWeighting: 0
-          enabled: 1
+          enabled: 0
         nodeLevel: 0

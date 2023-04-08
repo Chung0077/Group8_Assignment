@@ -55,9 +55,6 @@ MonoBehaviour:
       - guid: a201ea8f-1587-434d-bc80-a714e91a250b
         requirementData:
           rid: -2
-      - guid: 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
-        requirementData:
-          rid: 7100791354958545008
       iterator: 0
       globalWeighting: 0
       localWeighting: 0
@@ -85,15 +82,3 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791354958545008
-      type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
-        band:
-        - 200
-        - 300
-        maxBand:
-        - 0
-        - 300
-        itemType: 0
-        onlyOwned: 1

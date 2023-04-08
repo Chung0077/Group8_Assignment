@@ -20,7 +20,6 @@ MonoBehaviour:
     - c916f9ba-f688-4f85-b679-5c8d570fc27a
     - 61ec38d9-bebb-448b-9ca2-05bce32808c6
     - 88859cc1-daba-4db4-a5f3-627a326ac091
-    - 269443a8-2ad7-4132-b822-f436d04cd46d
     _values:
     - id: 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
       nodeConnection: []
@@ -102,20 +101,6 @@ MonoBehaviour:
       itemType: 0
       itemOutput: {fileID: 0}
       LookAt: 4
-      ownershipMode: 0
-      SetItemInUse: 0
-      NoResetItemOnEnd: 0
-      UpdateEachLoop: 0
-    - id: 269443a8-2ad7-4132-b822-f436d04cd46d
-      nodeConnection: []
-      iterator: 0
-      globalWeighting: 1
-      localWeighting: 0
-      ActionType: 0
-      itemsNeeded: 0
-      itemType: 0
-      itemOutput: {fileID: 0}
-      LookAt: 0
       ownershipMode: 0
       SetItemInUse: 0
       NoResetItemOnEnd: 0
