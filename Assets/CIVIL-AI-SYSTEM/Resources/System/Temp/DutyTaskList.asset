@@ -19,8 +19,8 @@ MonoBehaviour:
       requirementData:
         rid: -2
     iterator: 1
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Go to area
     desc: testing
   - id: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
@@ -29,8 +29,8 @@ MonoBehaviour:
       requirementData:
         rid: -2
     iterator: 1
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Go to area
     desc: testing
   - id: 0b886df7-bf05-432f-bcd5-a40dae13a348
@@ -39,8 +39,8 @@ MonoBehaviour:
       requirementData:
         rid: -2
     iterator: 1
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Go to area
     desc: testing
   references:
