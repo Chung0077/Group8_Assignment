@@ -17,63 +17,34 @@ MonoBehaviour:
     nodeConnection:
     - guid: d5134573-86b2-412c-84bf-1243e953fe88
       requirementData:
-        id: 0
-    - guid: a78faa46-ed08-407a-820c-26ed95af5ced
+        rid: 2658182799754526965
+    - guid: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
       requirementData:
-        id: 1
+        rid: 2658182799754526966
+    - guid: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
+      requirementData:
+        rid: 2658182799754526967
     iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.338
-    name: Fishermen
+    globalWeighting: 0.25
+    localWeighting: 0.1
+    name: Walker
     desc: stuff
-    startTime: 1100
-    endTime: 1800
+    startTime: 0
+    endTime: 2400
     weighting: 0
     useGlobals: 1
     checkIn: 0
-  - id: ae5bb08e-5860-4a9e-b9d1-f7cd95263adf
-    nodeConnection:
-    - guid: 79005886-eb1e-485e-b284-df706db57564
-      requirementData:
-        id: 2
-    iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
-    name: Woodcutter
-    desc: stuff
-    startTime: 800
-    endTime: 1700
-    weighting: 0
-    useGlobals: 1
-    checkIn: 1
-  - id: 466209d6-aaf4-466c-8f50-45ac013290f9
-    nodeConnection:
-    - guid: b240fbde-e4e6-4693-a96b-5bed4bc8a571
-      requirementData:
-        id: 3
-    - guid: 1fe09ffc-0b74-44ab-9ef3-b1b031cfc10e
-      requirementData:
-        id: 2
-    iterator: 0
-    globalWeighting: 0.75
-    localWeighting: 0.75
-    name: Sawmill Worker
-    desc: stuff
-    startTime: 1000
-    endTime: 1700
-    weighting: 0
-    useGlobals: 1
-    checkIn: 1
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 2658182799754526965
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
         timeWindow:
           enabled: 1
-          startTime: 1100
-          endTime: 1500
+          startTime: 0
+          endTime: 2400
         itemNeeded: 0
         workPlaceStateRequirment:
           numberOfWorkers: 0
@@ -86,17 +57,17 @@ MonoBehaviour:
             localWeighting: 0
           enabled: 0
         nodeLevel: 0
-    00000001:
+    - rid: 2658182799754526966
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: a78faa46-ed08-407a-820c-26ed95af5ced
+        connectedNodeID: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
         timeWindow:
           enabled: 1
-          startTime: 1500
-          endTime: 1800
+          startTime: 0
+          endTime: 2400
         itemNeeded: 0
         workPlaceStateRequirment:
-          numberOfWorkers: 0
+          numberOfWorkers: 1
           operatorForWorkplaceState: -2
           subNode:
             id: 
@@ -106,19 +77,17 @@ MonoBehaviour:
             localWeighting: 0
           enabled: 0
         nodeLevel: 0
-    00000002:
-      type: {class: , ns: , asm: }
-    00000003:
+    - rid: 2658182799754526967
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: b240fbde-e4e6-4693-a96b-5bed4bc8a571
+        connectedNodeID: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
         timeWindow:
           enabled: 1
-          startTime: 1000
-          endTime: 1700
+          startTime: 0
+          endTime: 2400
         itemNeeded: 0
         workPlaceStateRequirment:
-          numberOfWorkers: 0
+          numberOfWorkers: 1
           operatorForWorkplaceState: -2
           subNode:
             id: 

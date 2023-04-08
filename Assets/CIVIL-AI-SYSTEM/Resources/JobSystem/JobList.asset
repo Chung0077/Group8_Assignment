@@ -17,27 +17,27 @@ MonoBehaviour:
     nodeConnection:
     - guid: d5134573-86b2-412c-84bf-1243e953fe88
       requirementData:
-        rid: 7100791414826991616
+        rid: 2658182803827982336
     - guid: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
       requirementData:
-        rid: 7100791414826991617
+        rid: 2658182803827982337
     - guid: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
       requirementData:
-        rid: 7100791414826991618
+        rid: 2658182803827982338
     iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Walker
     desc: stuff
     startTime: 0
     endTime: 2400
     weighting: 0
     useGlobals: 1
-    checkIn: 1
+    checkIn: 0
   references:
     version: 2
     RefIds:
-    - rid: 7100791414826991616
+    - rid: 2658182803827982336
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
@@ -57,7 +57,7 @@ MonoBehaviour:
             localWeighting: 0
           enabled: 0
         nodeLevel: 0
-    - rid: 7100791414826991617
+    - rid: 2658182803827982337
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
@@ -77,7 +77,7 @@ MonoBehaviour:
             localWeighting: 0
           enabled: 0
         nodeLevel: 0
-    - rid: 7100791414826991618
+    - rid: 2658182803827982338
       type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2

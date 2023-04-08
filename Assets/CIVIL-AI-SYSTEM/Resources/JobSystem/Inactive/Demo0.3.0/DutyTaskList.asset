@@ -17,53 +17,34 @@ MonoBehaviour:
     nodeConnection:
     - guid: dd7f4d28-2b2b-4bcb-ad95-9ca0c6048e80
       requirementData:
-        id: 0
+        rid: -2
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.338
-    name: Collect Fish
+    globalWeighting: 0.25
+    localWeighting: 0.1
+    name: Go to area
     desc: testing
-  - id: ce14d475-15aa-4571-8330-6c14ac85bf4f
+  - id: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
     nodeConnection:
-    - guid: c6a83052-4110-4811-9105-b6d6b9c164e4
+    - guid: bc8854fb-9477-48fe-9a18-66038fca4988
       requirementData:
-        id: 0
+        rid: -2
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
-    name: Find Tree and cut down
+    globalWeighting: 0.25
+    localWeighting: 0.1
+    name: Go to area
     desc: testing
-  - id: 50b05fa3-04c7-4471-a529-6d602835ea63
+  - id: 0b886df7-bf05-432f-bcd5-a40dae13a348
     nodeConnection:
-    - guid: c327902a-11bd-4249-9622-20332480daf3
+    - guid: 9ce26aff-23a9-43c4-9aca-ecbf113e7c0f
       requirementData:
-        id: 0
+        rid: -2
     iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
-    name: Process Wood
-    desc: testing
-  - id: 4162e010-226c-4f26-9bbf-f60c998715ba
-    nodeConnection:
-    - guid: 96130bd8-e3ed-4c40-9ac1-b8f47e43d0ef
-      requirementData:
-        id: 0
-    iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.75
-    name: Get Wood
-    desc: testing
-  - id: b9a7d24c-29f0-4247-a5a0-97f16e5049e5
-    nodeConnection:
-    - guid: ed60e352-6c66-43eb-bf8b-d36941efc12d
-      requirementData:
-        id: 0
-    iterator: 1
-    globalWeighting: 0.75
-    localWeighting: 0.338
-    name: Sell from Store
+    globalWeighting: 0.25
+    localWeighting: 0.1
+    name: Go to area
     desc: testing
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: -2
       type: {class: , ns: , asm: }

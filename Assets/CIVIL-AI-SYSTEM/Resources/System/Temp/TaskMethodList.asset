@@ -20,10 +20,10 @@ MonoBehaviour:
         rid: -2
     - guid: 362d8bb2-338c-41ef-99c4-bc017e71958d
       requirementData:
-        rid: 7100791414826991625
+        rid: 2658182803827982345
     iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Stand
     desc: testing
   - id: bc8854fb-9477-48fe-9a18-66038fca4988
@@ -33,10 +33,10 @@ MonoBehaviour:
         rid: -2
     - guid: c201200a-1250-4689-9b44-1804eda1b2ec
       requirementData:
-        rid: 7100791414826991626
+        rid: 2658182803827982346
     iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Dance
     desc: testing
   - id: 9ce26aff-23a9-43c4-9aca-ecbf113e7c0f
@@ -46,10 +46,10 @@ MonoBehaviour:
         rid: -2
     - guid: 51834dbf-b6a6-4df5-b838-394f8593c6bc
       requirementData:
-        rid: 7100791414826991627
+        rid: 2658182803827982347
     iterator: 0
-    globalWeighting: 0
-    localWeighting: 0
+    globalWeighting: 0.25
+    localWeighting: 0.1
     name: Talk
     desc: testing
   references:
@@ -57,24 +57,24 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791414826991625
+    - rid: 2658182803827982345
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 362d8bb2-338c-41ef-99c4-bc017e71958d
         customAnimation: {fileID: 3691941507535760159, guid: 97ab8915f748db54ea06f3249270b7ac,
           type: 3}
         waitTime: 15
-    - rid: 7100791414826991626
+    - rid: 2658182803827982346
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: c201200a-1250-4689-9b44-1804eda1b2ec
         customAnimation: {fileID: 7400100, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 20
-    - rid: 7100791414826991627
+    - rid: 2658182803827982347
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 51834dbf-b6a6-4df5-b838-394f8593c6bc
         customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
-        waitTime: 30
+        waitTime: 10
