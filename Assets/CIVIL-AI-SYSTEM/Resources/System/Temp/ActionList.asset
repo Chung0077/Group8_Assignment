@@ -15,7 +15,6 @@ MonoBehaviour:
   nodes:
     _keys:
     - 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
-    - a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
     - 384363a3-455d-43e1-abbb-835bae19c868
     - c916f9ba-f688-4f85-b679-5c8d570fc27a
     - 61ec38d9-bebb-448b-9ca2-05bce32808c6
@@ -23,7 +22,6 @@ MonoBehaviour:
     - 40789853-26f0-4e3a-96e4-74818d67f180
     - e82a9b19-0701-4baa-a286-d5510fc7d125
     - 98b90874-c5ab-4afa-abb9-5f7564757162
-    - e068b4ca-e30c-4cd7-9262-0aad1cfdc686
     - ed3111f2-6a65-44df-b950-77ed0950ef08
     _values:
     - id: 6ef77e8a-205e-4c3c-9b45-8e856c8f1be5
@@ -36,21 +34,7 @@ MonoBehaviour:
       itemType: 3
       itemOutput: {fileID: 0}
       LookAt: 0
-      ownershipMode: 0
-      SetItemInUse: 1
-      NoResetItemOnEnd: 0
-      UpdateEachLoop: 0
-    - id: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
-      nodeConnection: []
-      iterator: 0
-      globalWeighting: 0.4
-      localWeighting: 0
-      ActionType: 0
-      itemsNeeded: 22
-      itemType: 3
-      itemOutput: {fileID: 0}
-      LookAt: 3
-      ownershipMode: 0
+      ownershipMode: 4
       SetItemInUse: 1
       NoResetItemOnEnd: 0
       UpdateEachLoop: 0
@@ -153,32 +137,18 @@ MonoBehaviour:
       SetItemInUse: 0
       NoResetItemOnEnd: 0
       UpdateEachLoop: 1
-    - id: e068b4ca-e30c-4cd7-9262-0aad1cfdc686
-      nodeConnection: []
-      iterator: 0
-      globalWeighting: 0.4
-      localWeighting: 0
-      ActionType: 7
-      itemsNeeded: 0
-      itemType: 0
-      itemOutput: {fileID: 0}
-      LookAt: 0
-      ownershipMode: 0
-      SetItemInUse: 0
-      NoResetItemOnEnd: 0
-      UpdateEachLoop: 0
     - id: ed3111f2-6a65-44df-b950-77ed0950ef08
       nodeConnection: []
       iterator: 0
       globalWeighting: 0.4
       localWeighting: 0
       ActionType: 0
-      itemsNeeded: 22
-      itemType: 3
+      itemsNeeded: 0
+      itemType: 0
       itemOutput: {fileID: 0}
       LookAt: 0
       ownershipMode: 0
-      SetItemInUse: 1
+      SetItemInUse: 0
       NoResetItemOnEnd: 0
       UpdateEachLoop: 0
   references:
