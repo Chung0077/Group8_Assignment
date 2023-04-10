@@ -936,6 +936,7 @@ GameObject:
   - component: {fileID: -4327115937933720273}
   - component: {fileID: 6686191464275225564}
   - component: {fileID: -4261372370312036260}
+  - component: {fileID: 5914280123053527935}
   m_Layer: 0
   m_Name: woman_claus
   m_TagString: Untagged
@@ -1135,6 +1136,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &5914280123053527935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3053766836195600253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &3058858387882792705
 GameObject:
   m_ObjectHideFlags: 0

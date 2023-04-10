@@ -1680,6 +1680,7 @@ GameObject:
   - component: {fileID: -3996745718582579847}
   - component: {fileID: -428622869695896013}
   - component: {fileID: -4912195818089772769}
+  - component: {fileID: 4579988639563400447}
   m_Layer: 0
   m_Name: man_scientist
   m_TagString: Untagged
@@ -1879,6 +1880,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &4579988639563400447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648955045242472922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &5674129499178370010
 GameObject:
   m_ObjectHideFlags: 0

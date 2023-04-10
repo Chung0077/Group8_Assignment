@@ -1095,6 +1095,7 @@ GameObject:
   - component: {fileID: -7988983306554917534}
   - component: {fileID: 8701229382080139281}
   - component: {fileID: -6465735832455129411}
+  - component: {fileID: 7253291576968944228}
   m_Layer: 0
   m_Name: woman_maid
   m_TagString: Untagged
@@ -1294,6 +1295,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &7253291576968944228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2967320388090595184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &3122372264657189557
 GameObject:
   m_ObjectHideFlags: 0

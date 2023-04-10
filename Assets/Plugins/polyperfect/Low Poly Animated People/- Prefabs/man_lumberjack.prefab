@@ -1637,6 +1637,7 @@ GameObject:
   - component: {fileID: -2483970828047198744}
   - component: {fileID: 3628918358578594404}
   - component: {fileID: -2368264791054211408}
+  - component: {fileID: -7556936041053544374}
   m_Layer: 0
   m_Name: man_lumberjack
   m_TagString: Untagged
@@ -1781,8 +1782,8 @@ MonoBehaviour:
       _values: []
   itemCarried: {fileID: 0}
   rooms: []
-  rightHand: {fileID: 0}
-  leftHand: {fileID: 0}
+  rightHand: {fileID: 3428174860516077043}
+  leftHand: {fileID: 1042173835680860201}
   references:
     version: 2
     RefIds: []
@@ -1836,6 +1837,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &-7556936041053544374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5112755813365930451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &5119463614954045580
 GameObject:
   m_ObjectHideFlags: 0

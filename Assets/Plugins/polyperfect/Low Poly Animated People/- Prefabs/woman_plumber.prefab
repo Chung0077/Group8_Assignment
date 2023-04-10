@@ -2571,6 +2571,7 @@ GameObject:
   - component: {fileID: 565815596764835407}
   - component: {fileID: 5886603795058118497}
   - component: {fileID: -2252117507279880872}
+  - component: {fileID: 8766501753824028182}
   m_Layer: 0
   m_Name: woman_plumber
   m_TagString: Untagged
@@ -2770,6 +2771,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &8766501753824028182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876960790497873813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &7903147763109659318
 GameObject:
   m_ObjectHideFlags: 0

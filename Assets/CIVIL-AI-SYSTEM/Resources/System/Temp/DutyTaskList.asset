@@ -21,7 +21,7 @@ MonoBehaviour:
     - guid: fdfa0257-2e6e-4759-a2a9-71912cb702d0
       requirementData:
         rid: -2
-    iterator: 2
+    iterator: 1
     globalWeighting: 0
     localWeighting: 0.5
     name: Find area

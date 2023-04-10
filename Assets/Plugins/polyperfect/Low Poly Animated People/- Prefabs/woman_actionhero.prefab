@@ -1224,6 +1224,7 @@ GameObject:
   - component: {fileID: 5300363168152535992}
   - component: {fileID: -4926243666785384409}
   - component: {fileID: 6118872302713190445}
+  - component: {fileID: 811500681817565187}
   m_Layer: 0
   m_Name: woman_actionhero
   m_TagString: Untagged
@@ -1423,6 +1424,23 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &811500681817565187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352872616938816083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: 1
+  type: 0
+  quanity: 0
+  inUse: 0
+  interaction: {fileID: 0}
 --- !u!1 &3488012033627515526
 GameObject:
   m_ObjectHideFlags: 0
