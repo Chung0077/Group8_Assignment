@@ -324,6 +324,19 @@ namespace AISystem.Civil.NeedSystem
             currentNeed = null;
             state.node[0] = FindNode(0);
         }
+        
+        //
+        public void ChangeNeedValue(string name, float value)
+        {
+            for (int i = 0; i < needData.Length; i++)
+            {
+                if (needData[i].GetName() == name)
+                {
+                    needData[i].AddValue(value);
+                }
+            }
+        }
+        
 
         private void ApplyAffect()
         {

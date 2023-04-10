@@ -12,6 +12,9 @@ public class StickingArrowToSurface : MonoBehaviour
     [SerializeField]
     private GameObject stickingArrow;
 
+    [SerializeField]
+    private Love shootedLove;
+
     private void OnCollisionEnter(Collision collision)
     {
         rb.isKinematic = true;
@@ -27,6 +30,24 @@ public class StickingArrowToSurface : MonoBehaviour
         {
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
         }
+        }
+        else
+        {
+            
+            Love love = collision.transform.GetComponent<Love>();
+            if(shootedLove==null)
+            {
+            shootedLove = love;
+            love.FallLove(0);
+            }
+            else if(shootedLove!=null)
+            {
+                
+
+            }
+
+            
+
         }
         collision.collider.GetComponent<IHittable>()?.GetHit();
 

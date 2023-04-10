@@ -24,7 +24,7 @@ MonoBehaviour:
     - guid: c60cf972-d334-418b-a5b2-657ac0eba24a
       requirementData:
         rid: -2
-    iterator: 2
+    iterator: 0
     globalWeighting: 0
     localWeighting: 0.5
     name: Walk

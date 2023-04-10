@@ -47,6 +47,10 @@ namespace AISystem.Civil.NeedSystem
             {
                 this.value = range[1];
             }
+            else if(this.value < range[0])
+            {
+                this.value = range[0];
+            }
 
             UpdateCurrentWeighting();
         }

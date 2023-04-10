@@ -9,165 +9,147 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25a2b28fe04a4e45ac4596aa67ff653, type: 3}
+  m_Script: {fileID: 11500000, guid: 19e262d6b1153a347aa4ea7ee688e431, type: 3}
   m_Name: ActionList
   m_EditorClassIdentifier: 
-  actions:
-  - id: 92616fe4-00b5-4c68-9de0-2f250348a71f
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 7
-    itemsNeeded: 16
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 1
-    UpdateEachLoop: 0
-  - id: 3111e520-6566-4085-91f2-16c5a0acc694
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 0
-    itemsNeeded: 0
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: 47799faa-7929-43be-a6a4-39b706a7aad4
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 7
-    itemsNeeded: 22
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 1
-    UpdateEachLoop: 0
-  - id: 91e841c5-ece2-4d06-9b34-daba32c72238
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 0
-    itemsNeeded: 0
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 4
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: 8cb648b3-2e38-46b0-931c-2d7a57a1d23d
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 5
-    itemsNeeded: 11
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 1
-    UpdateEachLoop: 0
-  - id: 5ffd18b4-045b-4f7e-b99d-526e7f99de9c
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 0
-    itemsNeeded: 0
-    itemType: 0
-    itemOutput: {fileID: 4761635705136645857, guid: 5df453230222fde4292ca3274b96ce41,
-      type: 3}
-    LookAt: 4
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: 130e58e3-957d-4ae3-bae4-97064812a995
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 6
-    itemsNeeded: 22
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 1
-    UpdateEachLoop: 0
-  - id: 5094ab5a-facc-484b-86bc-e6636c673903
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 0
-    itemsNeeded: 0
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 4
-    ownershipMode: 0
-    SetItemInUse: 1
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: 0a058bd3-894a-444e-a234-7f92eba25efa
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 2
-    itemsNeeded: 0
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 0
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: 07206103-674d-4418-8c5b-df296591f18d
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 14
-    itemsNeeded: 11
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 0
-    ownershipMode: 0
-    SetItemInUse: 0
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
-  - id: f3a5ea16-3ba1-4a22-8ee3-93d5b34de1e9
-    nodeConnection: []
-    iterator: 0
-    globalWeighting: 0
-    localWeighting: 0.5
-    ActionType: 0
-    itemsNeeded: 11
-    itemType: 0
-    itemOutput: {fileID: 0}
-    LookAt: 3
-    ownershipMode: 0
-    SetItemInUse: 0
-    NoResetItemOnEnd: 0
-    UpdateEachLoop: 0
+  nodes:
+    _keys:
+    - 8e07044b-9a13-4e85-b6f7-9b69ea29b428
+    - 4b62c21e-3dfb-4da6-8a1a-386638336492
+    - d93ea9a8-8da6-458f-93cf-318b0836a797
+    - 9036ffeb-c540-48be-8336-3432426cc2a1
+    - d85db981-5f2b-412d-8730-873ddd91527f
+    - 59a091a4-8a28-4662-9d31-c05ac4f8b3dc
+    - 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
+    - 0f54c10b-2b55-49e8-b80d-bbd30265c736
+    - 2031f72f-eefa-42bb-b429-d6526807e54e
+    _values:
+    - id: 8e07044b-9a13-4e85-b6f7-9b69ea29b428
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 1
+      localWeighting: 0.6
+      ActionType: 0
+      itemsNeeded: 0
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 0
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: 4b62c21e-3dfb-4da6-8a1a-386638336492
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 1
+      localWeighting: 1
+      ActionType: 7
+      itemsNeeded: 24
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 1
+      UpdateEachLoop: 0
+    - id: d93ea9a8-8da6-458f-93cf-318b0836a797
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 1
+      localWeighting: 1
+      ActionType: 0
+      itemsNeeded: 24
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: 9036ffeb-c540-48be-8336-3432426cc2a1
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 7
+      itemsNeeded: 16
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 1
+      UpdateEachLoop: 0
+    - id: d85db981-5f2b-412d-8730-873ddd91527f
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 0
+      itemsNeeded: 0
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
+    - id: 59a091a4-8a28-4662-9d31-c05ac4f8b3dc
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 1
+      localWeighting: 0.8
+      ActionType: 7
+      itemsNeeded: 25
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 1
+      UpdateEachLoop: 0
+    - id: 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 1
+      localWeighting: 0.8
+      ActionType: 0
+      itemsNeeded: 25
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 1
+      UpdateEachLoop: 1
+    - id: 0f54c10b-2b55-49e8-b80d-bbd30265c736
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 7
+      itemsNeeded: 24
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 1
+      UpdateEachLoop: 0
+    - id: 2031f72f-eefa-42bb-b429-d6526807e54e
+      nodeConnection: []
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      ActionType: 0
+      itemsNeeded: 24
+      itemType: 0
+      itemOutput: {fileID: 0}
+      LookAt: 0
+      ownershipMode: 0
+      SetItemInUse: 1
+      NoResetItemOnEnd: 0
+      UpdateEachLoop: 0
   references:
     version: 2
     RefIds: []

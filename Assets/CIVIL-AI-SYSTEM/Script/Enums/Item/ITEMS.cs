@@ -26,6 +26,8 @@ namespace AISystem
         FIREPLACE,
         CROWD,
         CHAIR,
-        AXE
+        AXE,
+        FAKELOVE1,FAKELOVE2,
+        TRUELOVE1,TRUELOVE2
     }
 }

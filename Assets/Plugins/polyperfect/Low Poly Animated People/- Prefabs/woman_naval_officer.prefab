@@ -1483,6 +1483,7 @@ GameObject:
   - component: {fileID: 2424345403449319793}
   - component: {fileID: -4641470683481565116}
   - component: {fileID: -4407477951373624981}
+  - component: {fileID: -4781283087699164010}
   m_Layer: 10
   m_Name: woman_naval_officer
   m_TagString: NPC
@@ -1694,11 +1695,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 1
+  itemName: 0
   type: 0
   quanity: 0
   inUse: 0
   interaction: {fileID: 0}
+--- !u!114 &-4781283087699164010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5342370406094091175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interest: 0
+  image: {fileID: 0}
+  bubble: {fileID: 0}
+  bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
+    type: 3}
 --- !u!1 &5342594034852911393
 GameObject:
   m_ObjectHideFlags: 0

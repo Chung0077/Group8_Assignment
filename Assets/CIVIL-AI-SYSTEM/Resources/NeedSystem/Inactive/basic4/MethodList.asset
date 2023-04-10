@@ -17,14 +17,15 @@ MonoBehaviour:
     - 6f7659f1-adba-4fc6-9db6-cd2818a5e2eb
     - 05693f41-9da0-4987-83f8-8f3d14f79ed3
     - 7191dd8a-57e0-44b5-8bd6-fe32f8d2b525
+    - 96a3d14b-ed99-4b3c-99bb-68b4bffa890c
     _values:
     - id: 6f7659f1-adba-4fc6-9db6-cd2818a5e2eb
       nodeConnection:
       - guid: 8e07044b-9a13-4e85-b6f7-9b69ea29b428
         requirementData:
-          rid: 7100791463471219050
+          rid: 7100791471288615192
       iterator: 4
-      globalWeighting: 0.6
+      globalWeighting: 1
       localWeighting: 0.6
       name: Wait Love
       desc: 
@@ -34,12 +35,12 @@ MonoBehaviour:
       affect: 0
     - id: 05693f41-9da0-4987-83f8-8f3d14f79ed3
       nodeConnection:
-      - guid: 4b62c21e-3dfb-4da6-8a1a-386638336492
+      - guid: 59a091a4-8a28-4662-9d31-c05ac4f8b3dc
         requirementData:
           rid: -2
-      - guid: d93ea9a8-8da6-458f-93cf-318b0836a797
+      - guid: 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
         requirementData:
-          rid: 7100791463471219051
+          rid: 7100791471288615193
       iterator: 0
       globalWeighting: 1
       localWeighting: 0.8
@@ -53,62 +54,92 @@ MonoBehaviour:
       nodeConnection:
       - guid: 9036ffeb-c540-48be-8336-3432426cc2a1
         requirementData:
-          rid: 7100791463471219052
+          rid: 7100791471288615194
       - guid: 4b62c21e-3dfb-4da6-8a1a-386638336492
         requirementData:
           rid: -2
       - guid: d93ea9a8-8da6-458f-93cf-318b0836a797
         requirementData:
-          rid: 7100791463471219053
+          rid: 7100791471288615195
       - guid: d85db981-5f2b-412d-8730-873ddd91527f
         requirementData:
-          rid: 7100791463471219054
+          rid: 7100791471288615196
       iterator: 0
-      globalWeighting: 0
+      globalWeighting: 1
       localWeighting: 1
-      name: Love Fail
+      name: Love Fail1
       desc: 
       range:
       - 0
       - 0
       affect: 100000
+    - id: 96a3d14b-ed99-4b3c-99bb-68b4bffa890c
+      nodeConnection:
+      - guid: 0f54c10b-2b55-49e8-b80d-bbd30265c736
+        requirementData:
+          rid: -2
+      - guid: 2031f72f-eefa-42bb-b429-d6526807e54e
+        requirementData:
+          rid: 7100791471288615197
+      - guid: 9036ffeb-c540-48be-8336-3432426cc2a1
+        requirementData:
+          rid: -2
+      - guid: d85db981-5f2b-412d-8730-873ddd91527f
+        requirementData:
+          rid: -2
+      iterator: 0
+      globalWeighting: 0
+      localWeighting: 0
+      name: Love Fail2
+      desc: 
+      range:
+      - 0
+      - 0
+      affect: 0
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791463471219050
+    - rid: 7100791471288615192
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 8e07044b-9a13-4e85-b6f7-9b69ea29b428
         customAnimation: {fileID: 7400002, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
-        waitTime: 10
-    - rid: 7100791463471219051
+        waitTime: 5
+    - rid: 7100791471288615193
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: d93ea9a8-8da6-458f-93cf-318b0836a797
+        connectedNodeID: 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
-        waitTime: 1
-    - rid: 7100791463471219052
+        waitTime: 5
+    - rid: 7100791471288615194
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 9036ffeb-c540-48be-8336-3432426cc2a1
         customAnimation: {fileID: 7400000, guid: 02958e4221a579146bf5f7580c6852b3,
           type: 3}
         waitTime: 0
-    - rid: 7100791463471219053
+    - rid: 7100791471288615195
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d93ea9a8-8da6-458f-93cf-318b0836a797
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 1
-    - rid: 7100791463471219054
+    - rid: 7100791471288615196
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d85db981-5f2b-412d-8730-873ddd91527f
         customAnimation: {fileID: 7400000, guid: 450f5fba06e582e4a9e45def4467c66e,
           type: 2}
         waitTime: 5
+    - rid: 7100791471288615197
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 2031f72f-eefa-42bb-b429-d6526807e54e
+        customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
+          type: 3}
+        waitTime: 1

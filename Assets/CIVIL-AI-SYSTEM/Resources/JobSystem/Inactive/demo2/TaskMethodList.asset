@@ -20,7 +20,7 @@ MonoBehaviour:
         rid: -2
     - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791463471219062
+        rid: 7100791471288614946
     iterator: 0
     globalWeighting: 0
     localWeighting: 0.5
@@ -33,7 +33,7 @@ MonoBehaviour:
         rid: -2
     - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791463471219063
+        rid: 7100791471288614947
     iterator: 0
     globalWeighting: 0
     localWeighting: 0.5
@@ -46,7 +46,7 @@ MonoBehaviour:
         rid: -2
     - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791463471219064
+        rid: 7100791471288614948
     iterator: 0
     globalWeighting: 0
     localWeighting: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
         rid: -2
     - guid: 91e841c5-ece2-4d06-9b34-daba32c72238
       requirementData:
-        rid: 7100791463471219065
+        rid: 7100791471288614949
     iterator: 0
     globalWeighting: 0
     localWeighting: 0.5
@@ -72,13 +72,13 @@ MonoBehaviour:
         rid: -2
     - guid: 5ffd18b4-045b-4f7e-b99d-526e7f99de9c
       requirementData:
-        rid: 7100791463471219066
+        rid: 7100791471288614950
     - guid: 130e58e3-957d-4ae3-bae4-97064812a995
       requirementData:
         rid: -2
     - guid: 5094ab5a-facc-484b-86bc-e6636c673903
       requirementData:
-        rid: 7100791463471219067
+        rid: 7100791471288614951
     - guid: 0a058bd3-894a-444e-a234-7f92eba25efa
       requirementData:
         rid: -2
@@ -94,7 +94,7 @@ MonoBehaviour:
         rid: -2
     - guid: f3a5ea16-3ba1-4a22-8ee3-93d5b34de1e9
       requirementData:
-        rid: 7100791463471219068
+        rid: 7100791471288614952
     iterator: 0
     globalWeighting: 0
     localWeighting: 0.5
@@ -105,49 +105,49 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791463471219062
+    - rid: 7100791471288614946
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
         customAnimation: {fileID: 3691941507535760159, guid: 97ab8915f748db54ea06f3249270b7ac,
           type: 3}
         waitTime: 10
-    - rid: 7100791463471219063
+    - rid: 7100791471288614947
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
         customAnimation: {fileID: 7400004, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 10
-    - rid: 7100791463471219064
+    - rid: 7100791471288614948
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
         customAnimation: {fileID: 7400000, guid: 8bd9e4e04899ecc4ea8078513ef72cd8,
           type: 3}
         waitTime: 10
-    - rid: 7100791463471219065
+    - rid: 7100791471288614949
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 91e841c5-ece2-4d06-9b34-daba32c72238
         customAnimation: {fileID: 7400098, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 10
-    - rid: 7100791463471219066
+    - rid: 7100791471288614950
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 5ffd18b4-045b-4f7e-b99d-526e7f99de9c
         customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 5
-    - rid: 7100791463471219067
+    - rid: 7100791471288614951
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 5094ab5a-facc-484b-86bc-e6636c673903
         customAnimation: {fileID: 7400088, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 10
-    - rid: 7100791463471219068
+    - rid: 7100791471288614952
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: f3a5ea16-3ba1-4a22-8ee3-93d5b34de1e9

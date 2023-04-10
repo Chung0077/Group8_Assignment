@@ -622,6 +622,7 @@ GameObject:
   - component: {fileID: -1388985914578087308}
   - component: {fileID: -7103918663226535728}
   - component: {fileID: 5102547170552894908}
+  - component: {fileID: 2277212140753695251}
   m_Layer: 10
   m_Name: man_metalhead
   m_TagString: NPC
@@ -833,11 +834,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 1
+  itemName: 0
   type: 0
   quanity: 0
   inUse: 0
   interaction: {fileID: 0}
+--- !u!114 &2277212140753695251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561038062939070784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interest: 0
+  image: {fileID: 0}
+  bubble: {fileID: 0}
+  bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
+    type: 3}
 --- !u!1 &2583166987548625998
 GameObject:
   m_ObjectHideFlags: 0

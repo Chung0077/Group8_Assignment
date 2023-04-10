@@ -755,6 +755,7 @@ GameObject:
   - component: {fileID: -9037868029668774150}
   - component: {fileID: -6162569395609193273}
   - component: {fileID: -5926946052075170073}
+  - component: {fileID: -4803272126796794997}
   m_Layer: 10
   m_Name: man_ninja
   m_TagString: NPC
@@ -966,11 +967,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 1
+  itemName: 0
   type: 0
   quanity: 0
   inUse: 0
   interaction: {fileID: 0}
+--- !u!114 &-4803272126796794997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074141714837481701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interest: 0
+  image: {fileID: 0}
+  bubble: {fileID: 0}
+  bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
+    type: 3}
 --- !u!1 &3218433960057710223
 GameObject:
   m_ObjectHideFlags: 0

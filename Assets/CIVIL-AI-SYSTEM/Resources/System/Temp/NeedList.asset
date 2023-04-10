@@ -27,22 +27,25 @@ MonoBehaviour:
       - guid: 7191dd8a-57e0-44b5-8bd6-fe32f8d2b525
         requirementData:
           rid: -2
-      iterator: 5
+      - guid: 96a3d14b-ed99-4b3c-99bb-68b4bffa890c
+        requirementData:
+          rid: -2
+      iterator: 1
       globalWeighting: 0
       localWeighting: 0
       name: LOVE
       desc: 
       weighting:
         nodes:
-        - inTangent: 0.011098525
+        - inTangent: 0
           inWeight: 0
-          outTangent: 0.011098525
+          outTangent: 0
           time: 0
           value: 1
           mode: 0
-        - inTangent: -0.010157142
-          inWeight: 0.23333335
-          outTangent: -0.010157142
+        - inTangent: -0
+          inWeight: 0.15833336
+          outTangent: -0
           time: 1
           value: 0
           mode: 0

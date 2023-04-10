@@ -2066,6 +2066,7 @@ GameObject:
   - component: {fileID: -33853896866575470}
   - component: {fileID: 5317333856911929300}
   - component: {fileID: -8077641075175950462}
+  - component: {fileID: -1591838790825208268}
   m_Layer: 10
   m_Name: man_chef
   m_TagString: NPC
@@ -2277,11 +2278,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 1
+  itemName: 0
   type: 0
   quanity: 0
   inUse: 0
   interaction: {fileID: 0}
+--- !u!114 &-1591838790825208268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805160710092053792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interest: 0
+  image: {fileID: 0}
+  bubble: {fileID: 0}
+  bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
+    type: 3}
 --- !u!1 &6977576022388582869
 GameObject:
   m_ObjectHideFlags: 0

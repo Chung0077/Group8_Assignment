@@ -1845,6 +1845,7 @@ GameObject:
   - component: {fileID: -6142262175040245552}
   - component: {fileID: -7099117357203616524}
   - component: {fileID: -1539392499032964768}
+  - component: {fileID: -5170291092728585715}
   m_Layer: 10
   m_Name: woman_scientist
   m_TagString: NPC
@@ -2056,11 +2057,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 1
+  itemName: 0
   type: 0
   quanity: 0
   inUse: 0
   interaction: {fileID: 0}
+--- !u!114 &-5170291092728585715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586036124460843729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interest: 0
+  image: {fileID: 0}
+  bubble: {fileID: 0}
+  bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
+    type: 3}
 --- !u!1 &6628701881409719096
 GameObject:
   m_ObjectHideFlags: 0
