@@ -13,37 +13,21 @@ MonoBehaviour:
   m_Name: DutyList
   m_EditorClassIdentifier: 
   duties:
-  - id: d5134573-86b2-412c-84bf-1243e953fe88
+  - id: f441fa0e-9d9c-4e05-9c45-ee5c968f7514
     nodeConnection:
-    - guid: 1ddf66da-a6c6-4a21-a841-1e75a8dc8433
+    - guid: 7cdacfeb-c7ad-4420-b151-2fcee9a4b895
       requirementData:
         rid: -2
-    iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go Walking
-    desc: 
-    weighting: 0
-  - id: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
-    nodeConnection:
-    - guid: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
+    - guid: 703e8d3e-5824-4c5d-b4fa-f86177ef882a
       requirementData:
         rid: -2
-    iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go Dancing
-    desc: 
-    weighting: 0
-  - id: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
-    nodeConnection:
-    - guid: 0b886df7-bf05-432f-bcd5-a40dae13a348
+    - guid: c60cf972-d334-418b-a5b2-657ac0eba24a
       requirementData:
         rid: -2
-    iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go Talking
+    iterator: 2
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Walk
     desc: 
     weighting: 0
   references:

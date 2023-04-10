@@ -16,7 +16,7 @@ MonoBehaviour:
     _keys:
     - 8cbf51b5-6d90-4988-89ea-8b66beae7dda
     - a201ea8f-1587-434d-bc80-a714e91a250b
-    - 106f96b1-8548-4e99-83b7-86b7bbe7c26c
+    - 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
     _values:
     - id: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
       nodeConnection:
@@ -25,19 +25,16 @@ MonoBehaviour:
           rid: -2
       - guid: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
         requirementData:
-          rid: 7100791425604517978
-      - guid: 40789853-26f0-4e3a-96e4-74818d67f180
-        requirementData:
-          rid: -2
+          rid: 7100791459752706109
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 1
       localWeighting: 0
-      name: sit on chair
+      name: In own bed
       desc: 
       range:
       - 0
       - 0
-      affect: 100
+      affect: 150
     - id: a201ea8f-1587-434d-bc80-a714e91a250b
       nodeConnection:
       - guid: 384363a3-455d-43e1-abbb-835bae19c868
@@ -45,76 +42,66 @@ MonoBehaviour:
           rid: -2
       - guid: c916f9ba-f688-4f85-b679-5c8d570fc27a
         requirementData:
-          rid: 7100791425604517979
+          rid: 7100791459752706110
       - guid: 61ec38d9-bebb-448b-9ca2-05bce32808c6
         requirementData:
-          rid: 7100791425604517980
+          rid: -2
       - guid: 88859cc1-daba-4db4-a5f3-627a326ac091
         requirementData:
-          rid: 7100791425604517981
+          rid: 7100791459752706111
       iterator: 0
-      globalWeighting: 0.5
+      globalWeighting: 1
       localWeighting: 0
       name: Get Food
       desc: 
       range:
       - 0
       - 0
-      affect: 150
-    - id: 106f96b1-8548-4e99-83b7-86b7bbe7c26c
+      affect: 300
+    - id: 843b0d3f-1fb7-4ff5-a305-aebffc9ad5c3
       nodeConnection:
-      - guid: e82a9b19-0701-4baa-a286-d5510fc7d125
+      - guid: 269443a8-2ad7-4132-b822-f436d04cd46d
         requirementData:
-          rid: 7100791425604517982
-      - guid: 98b90874-c5ab-4afa-abb9-5f7564757162
-        requirementData:
-          rid: -2
+          rid: 7100791459752706112
       iterator: 0
-      globalWeighting: 0
+      globalWeighting: 1
       localWeighting: 0
-      name: Wait Food
+      name: Snack
       desc: 
       range:
       - 0
       - 0
-      affect: 0
+      affect: 100
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791425604517978
+    - rid: 7100791459752706109
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: a58bf274-5f92-42a8-b67e-2c6cbf8eb51b
         customAnimation: {fileID: 5539831331247536789, guid: 98f277b0c8055e143b2fcf058d3c27dc,
           type: 3}
         waitTime: 10
-    - rid: 7100791425604517979
+    - rid: 7100791459752706110
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: c916f9ba-f688-4f85-b679-5c8d570fc27a
-        customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
+        customAnimation: {fileID: -3100369314251171874, guid: 12e52e465ed793a4d801955e9f964a82,
           type: 3}
         waitTime: 5
-    - rid: 7100791425604517980
-      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 61ec38d9-bebb-448b-9ca2-05bce32808c6
-        customAnimation: {fileID: 5539831331247536789, guid: 98f277b0c8055e143b2fcf058d3c27dc,
-          type: 3}
-        waitTime: 5
-    - rid: 7100791425604517981
+    - rid: 7100791459752706111
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 88859cc1-daba-4db4-a5f3-627a326ac091
-        customAnimation: {fileID: 7400088, guid: d83d395fd464b67438cebe05f5bfd990,
-          type: 3}
-        waitTime: 10
-    - rid: 7100791425604517982
-      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: e82a9b19-0701-4baa-a286-d5510fc7d125
-        customAnimation: {fileID: 3691941507535760159, guid: 97ab8915f748db54ea06f3249270b7ac,
+        customAnimation: {fileID: -3100369314251171874, guid: 12e52e465ed793a4d801955e9f964a82,
           type: 3}
         waitTime: 5
+    - rid: 7100791459752706112
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 269443a8-2ad7-4132-b822-f436d04cd46d
+        customAnimation: {fileID: 5539831331247536789, guid: 98f277b0c8055e143b2fcf058d3c27dc,
+          type: 3}
+        waitTime: 10

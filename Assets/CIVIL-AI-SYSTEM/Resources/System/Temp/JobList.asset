@@ -13,87 +13,23 @@ MonoBehaviour:
   m_Name: JobList
   m_EditorClassIdentifier: 
   jobs:
-  - id: 97f9ff56-3c50-4dda-a517-34cdce8c3590
+  - id: 9a042822-4215-4a1b-a239-a2f631965e80
     nodeConnection:
-    - guid: d5134573-86b2-412c-84bf-1243e953fe88
+    - guid: f441fa0e-9d9c-4e05-9c45-ee5c968f7514
       requirementData:
-        rid: 7100791423112314912
-    - guid: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
-      requirementData:
-        rid: 7100791423112314913
-    - guid: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
-      requirementData:
-        rid: 7100791423112314914
+        rid: -2
     iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
+    globalWeighting: 0.5
+    localWeighting: 0.5
     name: Walker
     desc: stuff
-    startTime: 0
-    endTime: 2400
+    startTime: 800
+    endTime: 1500
     weighting: 0
     useGlobals: 1
     checkIn: 0
   references:
     version: 2
     RefIds:
-    - rid: 7100791423112314912
-      type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: d5134573-86b2-412c-84bf-1243e953fe88
-        timeWindow:
-          enabled: 1
-          startTime: 0
-          endTime: 2400
-        itemNeeded: 0
-        workPlaceStateRequirment:
-          numberOfWorkers: 0
-          operatorForWorkplaceState: -2
-          subNode:
-            id: 
-            nodeConnection: []
-            iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
-          enabled: 0
-        nodeLevel: 0
-    - rid: 7100791423112314913
-      type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 2f7da86f-288f-41be-9ca7-0cec1c57ded6
-        timeWindow:
-          enabled: 1
-          startTime: 0
-          endTime: 2400
-        itemNeeded: 0
-        workPlaceStateRequirment:
-          numberOfWorkers: 1
-          operatorForWorkplaceState: -2
-          subNode:
-            id: 
-            nodeConnection: []
-            iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
-          enabled: 0
-        nodeLevel: 0
-    - rid: 7100791423112314914
-      type: {class: RequirementGeneral, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 3fe53cf7-4dc8-4c85-89e5-9de6464aeaf2
-        timeWindow:
-          enabled: 1
-          startTime: 0
-          endTime: 2400
-        itemNeeded: 0
-        workPlaceStateRequirment:
-          numberOfWorkers: 1
-          operatorForWorkplaceState: -2
-          subNode:
-            id: 
-            nodeConnection: []
-            iterator: 0
-            globalWeighting: 0
-            localWeighting: 0
-          enabled: 0
-        nodeLevel: 0
+    - rid: -2
+      type: {class: , ns: , asm: }

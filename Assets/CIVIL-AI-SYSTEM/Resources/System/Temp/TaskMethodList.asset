@@ -13,68 +13,144 @@ MonoBehaviour:
   m_Name: TaskMethodList
   m_EditorClassIdentifier: 
   methods:
-  - id: dd7f4d28-2b2b-4bcb-ad95-9ca0c6048e80
+  - id: 233e055a-fd05-4339-88fc-773fdc5c7682
     nodeConnection:
-    - guid: a5978c30-cead-4936-8639-a32182319942
+    - guid: 92616fe4-00b5-4c68-9de0-2f250348a71f
       requirementData:
         rid: -2
-    - guid: 362d8bb2-338c-41ef-99c4-bc017e71958d
+    - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791423112314915
+        rid: 7100791463471219069
     iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Stand
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Standing
     desc: testing
-  - id: bc8854fb-9477-48fe-9a18-66038fca4988
+  - id: fdfa0257-2e6e-4759-a2a9-71912cb702d0
     nodeConnection:
-    - guid: a5978c30-cead-4936-8639-a32182319942
+    - guid: 92616fe4-00b5-4c68-9de0-2f250348a71f
       requirementData:
         rid: -2
-    - guid: c201200a-1250-4689-9b44-1804eda1b2ec
+    - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791423112314916
+        rid: 7100791463471219070
     iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Dance
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Talking
     desc: testing
-  - id: 9ce26aff-23a9-43c4-9aca-ecbf113e7c0f
+  - id: 371e5ff6-3d11-4a68-8705-e2982b866c2d
     nodeConnection:
-    - guid: a5978c30-cead-4936-8639-a32182319942
+    - guid: 92616fe4-00b5-4c68-9de0-2f250348a71f
       requirementData:
         rid: -2
-    - guid: 51834dbf-b6a6-4df5-b838-394f8593c6bc
+    - guid: 3111e520-6566-4085-91f2-16c5a0acc694
       requirementData:
-        rid: 7100791423112314917
+        rid: 7100791463471219071
     iterator: 0
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Talk
+    globalWeighting: 0
+    localWeighting: 0
+    name: New Method
+    desc: testing
+  - id: 60118677-40b7-4e62-a7a0-29b5f08e20f2
+    nodeConnection:
+    - guid: 47799faa-7929-43be-a6a4-39b706a7aad4
+      requirementData:
+        rid: -2
+    - guid: 91e841c5-ece2-4d06-9b34-daba32c72238
+      requirementData:
+        rid: 7100791463471219072
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Sitting
+    desc: testing
+  - id: 737d887f-d6d1-4c01-8c7e-8d1ece0ab208
+    nodeConnection:
+    - guid: 8cb648b3-2e38-46b0-931c-2d7a57a1d23d
+      requirementData:
+        rid: -2
+    - guid: 5ffd18b4-045b-4f7e-b99d-526e7f99de9c
+      requirementData:
+        rid: 7100791463471219073
+    - guid: 130e58e3-957d-4ae3-bae4-97064812a995
+      requirementData:
+        rid: -2
+    - guid: 5094ab5a-facc-484b-86bc-e6636c673903
+      requirementData:
+        rid: 7100791463471219074
+    - guid: 0a058bd3-894a-444e-a234-7f92eba25efa
+      requirementData:
+        rid: -2
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Eating
+    desc: testing
+  - id: d96a809e-eceb-4518-8452-05f17fe72736
+    nodeConnection:
+    - guid: 07206103-674d-4418-8c5b-df296591f18d
+      requirementData:
+        rid: -2
+    - guid: f3a5ea16-3ba1-4a22-8ee3-93d5b34de1e9
+      requirementData:
+        rid: 7100791463471219075
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Not Eating
     desc: testing
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791423112314915
+    - rid: 7100791463471219069
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: 362d8bb2-338c-41ef-99c4-bc017e71958d
+        connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
         customAnimation: {fileID: 3691941507535760159, guid: 97ab8915f748db54ea06f3249270b7ac,
           type: 3}
-        waitTime: 15
-    - rid: 7100791423112314916
+        waitTime: 10
+    - rid: 7100791463471219070
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
-        connectedNodeID: c201200a-1250-4689-9b44-1804eda1b2ec
-        customAnimation: {fileID: 7400100, guid: d83d395fd464b67438cebe05f5bfd990,
-          type: 3}
-        waitTime: 20
-    - rid: 7100791423112314917
-      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 51834dbf-b6a6-4df5-b838-394f8593c6bc
-        customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
+        connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
+        customAnimation: {fileID: 7400004, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 10
+    - rid: 7100791463471219071
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 3111e520-6566-4085-91f2-16c5a0acc694
+        customAnimation: {fileID: 7400000, guid: 8bd9e4e04899ecc4ea8078513ef72cd8,
+          type: 3}
+        waitTime: 10
+    - rid: 7100791463471219072
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 91e841c5-ece2-4d06-9b34-daba32c72238
+        customAnimation: {fileID: 7400098, guid: d83d395fd464b67438cebe05f5bfd990,
+          type: 3}
+        waitTime: 10
+    - rid: 7100791463471219073
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 5ffd18b4-045b-4f7e-b99d-526e7f99de9c
+        customAnimation: {fileID: 7400008, guid: d83d395fd464b67438cebe05f5bfd990,
+          type: 3}
+        waitTime: 5
+    - rid: 7100791463471219074
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: 5094ab5a-facc-484b-86bc-e6636c673903
+        customAnimation: {fileID: 7400088, guid: d83d395fd464b67438cebe05f5bfd990,
+          type: 3}
+        waitTime: 10
+    - rid: 7100791463471219075
+      type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
+      data:
+        connectedNodeID: f3a5ea16-3ba1-4a22-8ee3-93d5b34de1e9
+        customAnimation: {fileID: 7400010, guid: d83d395fd464b67438cebe05f5bfd990,
+          type: 3}
+        waitTime: 5

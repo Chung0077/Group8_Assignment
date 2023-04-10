@@ -14,51 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
     _keys:
-    - SIT
-    - HUNGAR
+    - LOVE
     _values:
-    - id: 318354f4-8670-4373-b6ce-f7e2aed5a3f7
+    - id: fe3359be-e690-424f-96f2-39557cc41aad
       nodeConnection:
-      - guid: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
-        requirementData:
-          rid: 7100791437512933485
-      - guid: 4f609a55-451c-4a78-b0bc-e69f39963ce5
-        requirementData:
-          rid: 7100791437512933486
-      iterator: 0
-      globalWeighting: 0
-      localWeighting: 0
-      name: SIT
-      desc: 
-      weighting:
-        nodes:
-        - inTangent: 0.011098525
-          inWeight: 0
-          outTangent: 0.011098525
-          time: 0
-          value: 1
-          mode: 0
-        - inTangent: -0.010157142
-          inWeight: 0.23333335
-          outTangent: -0.010157142
-          time: 1
-          value: 0
-          mode: 0
-      range:
-      - 0
-      - 300
-    - id: 4a3dee73-644d-4a47-8946-4275f4bdd7e6
-      nodeConnection:
-      - guid: a201ea8f-1587-434d-bc80-a714e91a250b
-        requirementData:
-          rid: 7100791437512933487
-      - guid: 106f96b1-8548-4e99-83b7-86b7bbe7c26c
+      - guid: 05693f41-9da0-4987-83f8-8f3d14f79ed3
         requirementData:
           rid: -2
-      iterator: 0
+      - guid: 6f7659f1-adba-4fc6-9db6-cd2818a5e2eb
+        requirementData:
+          rid: -2
+      - guid: 7191dd8a-57e0-44b5-8bd6-fe32f8d2b525
+        requirementData:
+          rid: -2
+      iterator: 5
       globalWeighting: 0
       localWeighting: 0
-      name: HUNGAR
+      name: LOVE
       desc: 
       weighting:
         nodes:
@@ -76,45 +48,9 @@ MonoBehaviour:
           mode: 0
       range:
       - 0
-      - 150
+      - 100000
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791437512933485
-      type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 8cbf51b5-6d90-4988-89ea-8b66beae7dda
-        band:
-        - 0
-        - 200
-        maxBand:
-        - 0
-        - 300
-        itemType: 3
-        onlyOwned: 1
-    - rid: 7100791437512933486
-      type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: 4f609a55-451c-4a78-b0bc-e69f39963ce5
-        band:
-        - 0
-        - 80
-        maxBand:
-        - 0
-        - 100
-        itemType: 0
-        onlyOwned: 1
-    - rid: 7100791437512933487
-      type: {class: RequirementNeed, ns: AISystem, asm: RPG-AI-SYSTERM}
-      data:
-        connectedNodeID: a201ea8f-1587-434d-bc80-a714e91a250b
-        band:
-        - 0
-        - 50
-        maxBand:
-        - 0
-        - 150
-        itemType: 0
-        onlyOwned: 1

@@ -13,35 +13,41 @@ MonoBehaviour:
   m_Name: DutyTaskList
   m_EditorClassIdentifier: 
   dutyTasks:
-  - id: 1ddf66da-a6c6-4a21-a841-1e75a8dc8433
+  - id: 7cdacfeb-c7ad-4420-b151-2fcee9a4b895
     nodeConnection:
-    - guid: dd7f4d28-2b2b-4bcb-ad95-9ca0c6048e80
+    - guid: 233e055a-fd05-4339-88fc-773fdc5c7682
       requirementData:
         rid: -2
-    iterator: 1
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go to area
+    - guid: fdfa0257-2e6e-4759-a2a9-71912cb702d0
+      requirementData:
+        rid: -2
+    iterator: 2
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Find area
     desc: testing
-  - id: 6a83f78f-4d46-479d-8a31-0330f9f5e12a
+  - id: 703e8d3e-5824-4c5d-b4fa-f86177ef882a
     nodeConnection:
-    - guid: bc8854fb-9477-48fe-9a18-66038fca4988
+    - guid: 737d887f-d6d1-4c01-8c7e-8d1ece0ab208
+      requirementData:
+        rid: -2
+    - guid: d96a809e-eceb-4518-8452-05f17fe72736
       requirementData:
         rid: -2
     iterator: 1
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go to area
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Find Shop
     desc: testing
-  - id: 0b886df7-bf05-432f-bcd5-a40dae13a348
+  - id: c60cf972-d334-418b-a5b2-657ac0eba24a
     nodeConnection:
-    - guid: 9ce26aff-23a9-43c4-9aca-ecbf113e7c0f
+    - guid: 60118677-40b7-4e62-a7a0-29b5f08e20f2
       requirementData:
         rid: -2
     iterator: 1
-    globalWeighting: 0.25
-    localWeighting: 0.1
-    name: Go to area
+    globalWeighting: 0
+    localWeighting: 0.5
+    name: Find Chair
     desc: testing
   references:
     version: 2

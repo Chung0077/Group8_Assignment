@@ -456,9 +456,11 @@ GameObject:
   m_Component:
   - component: {fileID: 389783431082551402}
   - component: {fileID: 626803435610787849}
-  - component: {fileID: 1762893162302547937}
-  - component: {fileID: 6023388407648438123}
-  - component: {fileID: 3638259668736781498}
+  - component: {fileID: -2792405469665273218}
+  - component: {fileID: -701952690859512072}
+  - component: {fileID: 1828564808641629925}
+  - component: {fileID: 7097350963639139477}
+  - component: {fileID: 1515788622498224114}
   m_Layer: 0
   m_Name: man_astronaut
   m_TagString: Untagged
@@ -493,7 +495,7 @@ Animator:
   m_GameObject: {fileID: 1425348900863795473}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a4a3ba617ed9c5946bb76844ec1ef299, type: 3}
-  m_Controller: {fileID: 22100000, guid: 0bc9daed166968e47bb790c972979a37, type: 2}
+  m_Controller: {fileID: 9100000, guid: f83edf11f76f204478d978fc5e85db68, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -504,8 +506,139 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!143 &1762893162302547937
-CharacterController:
+--- !u!195 &-2792405469665273218
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425348900863795473}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-701952690859512072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425348900863795473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1464bab56a57bc4eb3f61760be3388e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databoard: {fileID: 0}
+  moving: 0
+  dynamic: 0
+  wasDynamicOnPause: 0
+--- !u!114 &1828564808641629925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425348900863795473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92d66b7df83e81d4c8640de6f81535f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  queue:
+    candidates: []
+  workController: {fileID: 0}
+  needController: {fileID: 0}
+  home: {fileID: 0}
+  job: 
+  state: 0
+  timer: 0
+  dutyManager: {fileID: 0}
+  dutyList:
+    id: 5f66bbe5-6b8b-4f10-8360-bc687fbb2363
+    nodeConnection: []
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0
+    name: 
+    desc: 
+    weighting: 0
+  currentDuty: 
+  currentAction:
+    id: 
+    nodeConnection: []
+    iterator: 0
+    globalWeighting: 0
+    localWeighting: 0
+    ActionType: 0
+    itemsNeeded: 0
+    itemType: 0
+    itemOutput: {fileID: 0}
+    LookAt: 0
+    ownershipMode: 0
+    SetItemInUse: 0
+    NoResetItemOnEnd: 0
+    UpdateEachLoop: 0
+  currentController: 0
+  previousController: 0
+  currentGoalObj: {fileID: 0}
+  currentItem: 0
+  mounted: {fileID: 0}
+  inControlOfMount: 0
+  atWork: 0
+  hasAction: 0
+  isPaused: 0
+  ownershipManager:
+    OwnershipGroup:
+      _keys: 
+      _values: []
+  itemCarried: {fileID: 0}
+  rooms: []
+  rightHand: {fileID: 4877515918058049702}
+  leftHand: {fileID: 8009738744481043699}
+  references:
+    version: 2
+    RefIds: []
+--- !u!54 &7097350963639139477
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425348900863795473}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!136 &1515788622498224114
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -522,107 +655,11 @@ CharacterController:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
+  m_Radius: 0.2
   m_Height: 1.8
-  m_Radius: 0.3
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.99, z: 0}
---- !u!114 &6023388407648438123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425348900863795473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9207ee96ce6bd8e40b87d68769cd7432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleStates:
-  - stateName: Waving
-    animationBool: isWaving
-    minStateTime: 0
-    maxStateTime: 29
-    stateWeight: 1
-  - stateName: Texting
-    animationBool: isTexting
-    minStateTime: 0
-    maxStateTime: 100
-    stateWeight: 0
-  movementStates:
-  - stateName: Walking
-    animationBool: isWalking
-    maxStateTime: 40
-    moveSpeed: 1
-    turnSpeed: 120
-  - stateName: Running
-    animationBool: isRunning
-    maxStateTime: 20
-    moveSpeed: 4
-    turnSpeed: 120
-  attackingStates:
-  - stateName: 'Punch Left '
-    animationBool: isPunching_Left
-  - stateName: Punch Right
-    animationBool: isPunching_Right
-  - stateName: Kicking
-    animationBool: isKicking
-  deathStates:
-  - stateName: Dead
-    animationBool: isDead
-  species: Human
-  stats: {fileID: 11400000, guid: df9751c3f50884146ba79d1e58dd1354, type: 2}
-  wanderZone: 10
-  awareness: 30
-  scent: 30
-  constainedToWanderZone: 0
-  nonAgressiveTowards: []
-  matchSurfaceRotation: 0
-  surfaceRotationSpeed: 2
-  logChanges: 0
-  showGizmos: 0
-  drawWanderRange: 1
-  drawScentRange: 1
-  drawAwarenessRange: 1
-  deathEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  attackingEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  idleEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  movementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  CurrentState: 0
---- !u!195 &3638259668736781498
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425348900863795473}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.19
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: -0.1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &1524334665020104977
 GameObject:
   m_ObjectHideFlags: 0
