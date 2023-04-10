@@ -12,4 +12,6 @@ public class StickArrow : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+
 }

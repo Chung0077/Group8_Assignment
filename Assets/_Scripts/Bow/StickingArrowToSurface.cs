@@ -17,15 +17,17 @@ public class StickingArrowToSurface : MonoBehaviour
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
+        if(collision.transform.tag!="NPC")
+        {
         GameObject arrow = Instantiate(stickingArrow);
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
-
+        
         if (collision.collider.attachedRigidbody != null)
         {
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
         }
-
+        }
         collision.collider.GetComponent<IHittable>()?.GetHit();
 
         Destroy(gameObject);
