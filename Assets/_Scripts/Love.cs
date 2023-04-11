@@ -27,7 +27,7 @@ public class Love : MonoBehaviour
 private void Start() {
             agent = this.gameObject.GetComponent<NavMeshAgent>();
 }
-    public void FallLove(int love=0)
+    /*public void FallLove(int love=0)
     {
         if(items.itemName == AISystem.ITEMS.NULL)
         {
@@ -41,11 +41,11 @@ private void Start() {
         items.itemName = AISystem.ITEMS.NULL;
         need.ChangeNeedValue("LOVE",95000);
         }
-    }
+    }*/
 
     public void FindLove(Transform target)
     {
-        target = love;
+         love = target;
         agent.destination = love.position;
         ani.SetBool("Moving",true);
         ani.SetBool("Dynamic",false);
@@ -59,9 +59,12 @@ private void Start() {
     }
 
     private void OnCollisionEnter(Collision other) {
+                Debug.Log("Collision");
+                
     if(love!=null && other.transform == love.transform)
     {
-        agent.isStopped = true;
+        Debug.Log("CollisionLove");
+        agent.velocity=Vector3.zero;
         this.transform.LookAt(love);
         ani.SetBool("Moving",false);
         //ani.SetBool("Dynamic",true);
@@ -79,5 +82,10 @@ private void Start() {
             
         }
     }
+    }
+    private void Update() {
+        if(love){
+            agent.SetDestination(love.transform.position);
+        }
     }
 }

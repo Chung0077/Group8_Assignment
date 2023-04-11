@@ -898,7 +898,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2891758107859613268}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -1039,7 +1039,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.4
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
@@ -1077,6 +1077,7 @@ MonoBehaviour:
   bubble: {fileID: 0}
   bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
     type: 3}
+  agent: {fileID: 0}
 --- !u!1 &2964548489205595916
 GameObject:
   m_ObjectHideFlags: 0

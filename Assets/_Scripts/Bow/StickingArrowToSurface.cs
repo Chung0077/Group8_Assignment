@@ -53,13 +53,13 @@ public class StickingArrowToSurface : MonoBehaviour
                     }
                 else
                 {
-                    ArrowController.shootedLove.agent.SetDestination(love.transform.position);
-                    love.agent.SetDestination(ArrowController.shootedLove.transform.position);
+                    //ArrowController.shootedLove.agent.SetDestination(love.transform.position);
+                    //love.agent.SetDestination(ArrowController.shootedLove.transform.position);
 
 
 
-                    //ArrowController.shootedLove.FindLove(love.transform);
-                    //love.FindLove(ArrowController.shootedLove.transform);
+                    ArrowController.shootedLove.FindLove(love.transform);
+                    love.FindLove(ArrowController.shootedLove.transform);
                     love.agent.isStopped=(false); 
                     ArrowController.shootedLove.agent.isStopped=(false); 
                     
