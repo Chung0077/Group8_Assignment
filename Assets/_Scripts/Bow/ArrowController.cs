@@ -12,6 +12,7 @@ public class ArrowController : MonoBehaviour
 
     [SerializeField]
     private AudioSource bowReleaseAudioSource;
+    static public Love shootedLove = null;
 
     public void PrepareArrow()
     {

@@ -12,7 +12,7 @@ public class Interset : MonoBehaviour
         Debug.Log("Child count: " + childCount);
         for (int i = 0; (2*i) < childCount; i++)
         {
-            for (int j = 0; i < 2; i++)
+            for (int j = 0; j < 2; j++)
             {
                 Debug.Log("2*i+j="+ (int)(2*i+j));
                 Love love =transform.GetChild(2*i+j).GetComponent<Love>();

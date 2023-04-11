@@ -26,7 +26,7 @@ MonoBehaviour:
         rid: -2
     iterator: 0
     globalWeighting: 0
-    localWeighting: 0.5
+    localWeighting: 0
     name: Walk
     desc: 
     weighting: 0

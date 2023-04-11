@@ -18,19 +18,22 @@ MonoBehaviour:
     _values:
     - id: fe3359be-e690-424f-96f2-39557cc41aad
       nodeConnection:
-      - guid: 05693f41-9da0-4987-83f8-8f3d14f79ed3
-        requirementData:
-          rid: -2
       - guid: 6f7659f1-adba-4fc6-9db6-cd2818a5e2eb
-        requirementData:
-          rid: -2
-      - guid: 7191dd8a-57e0-44b5-8bd6-fe32f8d2b525
         requirementData:
           rid: -2
       - guid: 96a3d14b-ed99-4b3c-99bb-68b4bffa890c
         requirementData:
           rid: -2
-      iterator: 1
+      - guid: a103f110-e9f9-41a8-b579-4d12533ab1fe
+        requirementData:
+          rid: -2
+      - guid: 15199004-f6cc-4382-bc38-e0c79201f330
+        requirementData:
+          rid: -2
+      - guid: 05693f41-9da0-4987-83f8-8f3d14f79ed3
+        requirementData:
+          rid: -2
+      iterator: 4
       globalWeighting: 0
       localWeighting: 0
       name: LOVE

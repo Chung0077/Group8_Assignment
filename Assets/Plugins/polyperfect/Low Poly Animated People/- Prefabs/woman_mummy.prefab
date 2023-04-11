@@ -507,8 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc7dbe14186b914dbc974a96d65fd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 5270754374523748594}
   interest: 0
-  image: {fileID: 0}
   bubble: {fileID: 0}
   bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
     type: 3}

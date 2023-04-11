@@ -14,6 +14,8 @@ public class Bubble : MonoBehaviour
    }
     void Update()
     {
+        if(icon && !image.sprite)image.sprite = icon;
+        transform.position = target.position;
         transform.LookAt(Camera.main.transform.position);
     }
 }
