@@ -16,7 +16,7 @@ public class BowStringController : MonoBehaviour
     private Transform midPointGrabObject, midPointVisualObject, midPointParent;
 
     [SerializeField]
-    private float bowStringStretchLimit = 0.3f;
+    private float bowStringStretchLimit = 0.5f;
 
     private Transform interactor;
 
@@ -28,7 +28,7 @@ public class BowStringController : MonoBehaviour
     [SerializeField]
     private AudioSource audioSource;
 
-    public UnityEvent OnBowPulled;
+    public UnityEvent OnBowPulled, OnBowUnPulled;
     public UnityEvent<float> OnBowReleased;
 
     private void Awake()
@@ -40,11 +40,19 @@ public class BowStringController : MonoBehaviour
     {
         interactable.selectEntered.AddListener(PrepareBowString);
         interactable.selectExited.AddListener(ResetBowString);
+        interactable.deactivated.AddListener(ResetBowString);
+    }
+
+    private void ResetBowString(DeactivateEventArgs arg0)
+    {
+        OnBowReleased?.Invoke(strength);
+        interactable.interactionManager.SelectCancel(arg0.interactor.transform.GetComponent<XRDirectInteractor>(),interactable);
     }
 
     private void ResetBowString(SelectExitEventArgs arg0)
     {
-        OnBowReleased?.Invoke(strength);
+        OnBowUnPulled?.Invoke();
+        //OnBowReleased?.Invoke(strength);
         strength = 0;
         previousStrength = 0;
         audioSource.pitch = 1;

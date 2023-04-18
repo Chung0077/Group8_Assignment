@@ -18,6 +18,10 @@ public class ArrowController : MonoBehaviour
     {
         midPointVisual.SetActive(true);
     }
+    public void StopPrepareArrow()
+    {
+        midPointVisual.SetActive(false);
+    }
 
     public void ReleaseArrow(float strength)
     {
