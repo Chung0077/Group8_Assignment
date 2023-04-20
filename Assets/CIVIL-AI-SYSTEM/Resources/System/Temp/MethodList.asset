@@ -27,7 +27,7 @@ MonoBehaviour:
           rid: -2
       - guid: 8e07044b-9a13-4e85-b6f7-9b69ea29b428
         requirementData:
-          rid: 7100791476437123635
+          rid: 7100791696337928194
       iterator: 4
       globalWeighting: 1
       localWeighting: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
           rid: -2
       - guid: 6227bf78-c614-4175-a371-2190fb7d821a
         requirementData:
-          rid: 7100791476437123636
+          rid: 7100791696337928195
       iterator: 0
       globalWeighting: 1
       localWeighting: 1
@@ -61,13 +61,13 @@ MonoBehaviour:
           rid: -2
       - guid: d93ea9a8-8da6-458f-93cf-318b0836a797
         requirementData:
-          rid: 7100791476437123637
+          rid: 7100791696337928196
       - guid: 9036ffeb-c540-48be-8336-3432426cc2a1
         requirementData:
           rid: -2
       - guid: d85db981-5f2b-412d-8730-873ddd91527f
         requirementData:
-          rid: 7100791476437123638
+          rid: 7100791696337928197
       iterator: 0
       globalWeighting: 1
       localWeighting: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
           rid: -2
       - guid: 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
         requirementData:
-          rid: 7100791476437123639
+          rid: 7100791696337928198
       iterator: 0
       globalWeighting: 1
       localWeighting: 1
@@ -101,13 +101,13 @@ MonoBehaviour:
           rid: -2
       - guid: 2031f72f-eefa-42bb-b429-d6526807e54e
         requirementData:
-          rid: 7100791476437123640
+          rid: 7100791696337928199
       - guid: 9036ffeb-c540-48be-8336-3432426cc2a1
         requirementData:
           rid: -2
       - guid: d85db981-5f2b-412d-8730-873ddd91527f
         requirementData:
-          rid: 7100791476437123641
+          rid: 7100791696337928200
       iterator: 0
       globalWeighting: 1
       localWeighting: 1
@@ -122,49 +122,49 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7100791476437123635
+    - rid: 7100791696337928194
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 8e07044b-9a13-4e85-b6f7-9b69ea29b428
         customAnimation: {fileID: -3100369314251171874, guid: 12e52e465ed793a4d801955e9f964a82,
           type: 3}
         waitTime: 5
-    - rid: 7100791476437123636
+    - rid: 7100791696337928195
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 6227bf78-c614-4175-a371-2190fb7d821a
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 120
-    - rid: 7100791476437123637
+    - rid: 7100791696337928196
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d93ea9a8-8da6-458f-93cf-318b0836a797
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 1
-    - rid: 7100791476437123638
+    - rid: 7100791696337928197
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d85db981-5f2b-412d-8730-873ddd91527f
         customAnimation: {fileID: 7400010, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 5
-    - rid: 7100791476437123639
+    - rid: 7100791696337928198
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 7eee5a4b-1f63-47fe-a01f-f4b9ed29eb4c
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 120
-    - rid: 7100791476437123640
+    - rid: 7100791696337928199
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: 2031f72f-eefa-42bb-b429-d6526807e54e
         customAnimation: {fileID: 7400058, guid: d83d395fd464b67438cebe05f5bfd990,
           type: 3}
         waitTime: 1
-    - rid: 7100791476437123641
+    - rid: 7100791696337928200
       type: {class: RequirementAction, ns: AISystem, asm: RPG-AI-SYSTERM}
       data:
         connectedNodeID: d85db981-5f2b-412d-8730-873ddd91527f

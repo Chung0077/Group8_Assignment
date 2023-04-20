@@ -33,22 +33,23 @@ public class StickingArrowToSurface : MonoBehaviour
         {
             
             Love love = collision.transform.GetComponent<Love>();
-            love.EnableAI(false);
-            love.agent.isStopped=(true); 
-
-            if(ArrowController.shootedLove==null)
+            love.love = true;
+            //love.EnableAI(false);
+            //love.agent.isStopped=(true); 
+/*
+            if(LoveBow.shootedLove==null)
             {
-            ArrowController.shootedLove = love;
+            LoveBow.shootedLove = love;
             //love.FallLove(0);
             }
-            else if(ArrowController.shootedLove!=null)
+            else if(LoveBow.shootedLove!=null)
             {
 
-                if(ArrowController.shootedLove.gameObject == love.gameObject)
+                if(LoveBow.shootedLove.gameObject == love.gameObject)
                 {
-                    ArrowController.shootedLove=null;
-                                love.EnableAI(true);
-                                love.agent.isStopped=(false); 
+                    //LoveBow.shootedLove=null;
+                                //love.EnableAI(true);
+                                //love.agent.isStopped=(false); 
 
                     }
                 else
@@ -58,14 +59,14 @@ public class StickingArrowToSurface : MonoBehaviour
 
 
 
-                    ArrowController.shootedLove.FindLove(love.transform);
-                    love.FindLove(ArrowController.shootedLove.transform);
+                    LoveBow.shootedLove.FindLove(love.transform);
+                    love.FindLove(LoveBow.shootedLove.transform);
                     love.agent.isStopped=(false); 
-                    ArrowController.shootedLove.agent.isStopped=(false); 
+                    LoveBow.shootedLove.agent.isStopped=(false); 
                     
                 }
             }
-            
+            */
 
         }
         collision.collider.GetComponent<IHittable>()?.GetHit();
@@ -75,12 +76,12 @@ public class StickingArrowToSurface : MonoBehaviour
     }
 
 
-
+/*
     void Kiss(Transform love1, Transform love2)
     {
         NavMeshAgent nav1 =  love1.gameObject.GetComponent<NavMeshAgent>();
         NavMeshAgent nav2 =  love2.gameObject.GetComponent<NavMeshAgent>();
         nav1.destination = love2.position;
         nav2.destination = love1.position;
-    }
+    }*/
 }

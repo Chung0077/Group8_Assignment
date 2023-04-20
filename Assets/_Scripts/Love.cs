@@ -13,7 +13,13 @@ public class Love : MonoBehaviour
     public Bubble bubble;
     [SerializeField] GameObject bubblePrefab;
     public NavMeshAgent agent;
-    Transform love = null;
+    [SerializeField] Transform loveTarget = null;
+    public bool love
+    {
+        get{return _love;}
+        set{_love = value; FallLove(_love);}
+    }
+    private bool _love = false;
     Animator ani;
     void Awake()
     {
@@ -45,10 +51,37 @@ private void Start() {
 
     public void FindLove(Transform target)
     {
-         love = target;
-        agent.destination = love.position;
+        loveTarget = target;
+        agent.destination = loveTarget.position;
         ani.SetBool("Moving",true);
         ani.SetBool("Dynamic",false);
+    }
+    void FallLove(bool love)
+    {
+        if(love==true)
+        {
+            EnableAI(false);
+            if(LoveBow.shootedLove==null){
+                LoveBow.shootedLove=this;
+                ani.SetTrigger("Love");
+                agent.isStopped=true; 
+            }
+            else if(LoveBow.shootedLove==this)
+            {
+                LoveBow.shootedLove=null;
+                EnableAI(true);
+                ani.SetTrigger("UnLove");
+                agent.isStopped=false; 
+            }
+            else if(LoveBow.shootedLove!=this)
+            {
+                ani.SetTrigger("Love");
+                loveTarget=LoveBow.shootedLove.transform;
+                LoveBow.shootedLove.loveTarget = this.transform;
+                LoveBow.shootedLove=null;
+                
+            }
+        }
     }
 
     public void EnableAI(bool enable)
@@ -57,19 +90,19 @@ private void Start() {
         this.GetComponent<AISystem.AIDataBoard>().enabled=enable;
 
     }
-
+/*
     private void OnCollisionEnter(Collision other) {
                 Debug.Log("Collision");
                 
-    if(love!=null && other.transform == love.transform)
+    if(loveTarget!=null && other.transform == loveTarget.transform)
     {
         Debug.Log("CollisionLove");
         agent.velocity=Vector3.zero;
-        this.transform.LookAt(love);
-        ani.SetBool("Moving",false);
+        this.transform.LookAt(loveTarget);
+        //ani.SetBool("Moving",false);
         //ani.SetBool("Dynamic",true);
-        ani.SetTrigger("Kiss");
-        bool truthLove = (love.GetComponent<Love>().interest == interest)?true:false;
+        //ani.SetTrigger("Kiss");
+        bool truthLove = (loveTarget.GetComponent<Love>().interest == interest)?true:false;
         ani.SetBool("Love",truthLove);
         if(truthLove==true)
         {
@@ -78,14 +111,17 @@ private void Start() {
         else
         {
             EnableAI(true);
-            ArrowController.shootedLove=null;
+            LoveBow.shootedLove=null;
             
         }
     }
-    }
+    }*/
     private void Update() {
-        if(love){
-            agent.SetDestination(love.transform.position);
+        ani.SetFloat("Speed",agent.velocity.magnitude);
+        if(loveTarget){
+            if(Vector3.Distance(this.transform.position,loveTarget.transform.position)>=1)
+            agent.SetDestination(loveTarget.transform.position);
+            agent.isStopped=false; 
         }
     }
 }
