@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navMode: 1
   speed: 3
-  angularSpeed: 90
+  angularSpeed: 200
   acceleration: 8
-  stoppingDistance: 0
-  needSystemEnabled: 1
+  stoppingDistance: 0.4
+  needSystemEnabled: 0

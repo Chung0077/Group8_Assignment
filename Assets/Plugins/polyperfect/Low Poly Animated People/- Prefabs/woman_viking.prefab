@@ -2312,9 +2312,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &-1949156397814459550
 CapsuleCollider:
@@ -2374,6 +2374,7 @@ MonoBehaviour:
   bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
     type: 3}
   agent: {fileID: 0}
+  loveTarget: {fileID: 0}
 --- !u!1 &6624540411646230899
 GameObject:
   m_ObjectHideFlags: 0

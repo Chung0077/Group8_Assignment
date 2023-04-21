@@ -13,7 +13,7 @@ public class Love : MonoBehaviour
     public Bubble bubble;
     [SerializeField] GameObject bubblePrefab;
     public NavMeshAgent agent;
-    [SerializeField] Transform loveTarget = null;
+    public Transform loveTarget = null;
     public bool love
     {
         get{return _love;}
@@ -76,10 +76,11 @@ private void Start() {
             else if(LoveBow.shootedLove!=this)
             {
                 ani.SetTrigger("Love");
-                loveTarget=LoveBow.shootedLove.transform;
-                LoveBow.shootedLove.loveTarget = this.transform;
+                loveTarget=LoveBow.shootedLove.gameObject.transform;
+                LoveBow.shootedLove.loveTarget = this.gameObject.transform;
+                LoveBow.shootedLove.agent.isStopped = false;
                 LoveBow.shootedLove=null;
-                
+                agent.isStopped=false; 
             }
         }
     }
@@ -89,6 +90,18 @@ private void Start() {
         this.GetComponent<AISystem.AIController>().enabled=enable;
         this.GetComponent<AISystem.AIDataBoard>().enabled=enable;
 
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log("Collision: "+other.gameObject.name);
+        if(other.transform.tag == "NPC")
+        {
+        if(other.gameObject.transform == this.loveTarget.gameObject.transform)
+    {
+        Debug.Log("kiss");
+        ani.SetTrigger("Kiss");
+    }
+    }
     }
 /*
     private void OnCollisionEnter(Collision other) {
@@ -119,9 +132,18 @@ private void Start() {
     private void Update() {
         ani.SetFloat("Speed",agent.velocity.magnitude);
         if(loveTarget){
-            if(Vector3.Distance(this.transform.position,loveTarget.transform.position)>=1)
-            agent.SetDestination(loveTarget.transform.position);
-            agent.isStopped=false; 
+            if(Vector3.Distance(this.transform.position,loveTarget.transform.position)>=0.5)
+            {
+                agent.SetDestination(loveTarget.transform.position);
+                transform.LookAt(loveTarget.transform.position);
+                //agent.isStopped=false; 
+            }
+            else
+            {
+                agent.SetDestination(loveTarget.transform.position);
+                transform.LookAt(loveTarget.transform.position);
+                //agent.speed=0; 
+            }
         }
     }
 }

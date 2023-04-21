@@ -7,6 +7,7 @@ namespace AISystem.Common.Objects
     public static class SettingsLoader
     {
         static Settings settings = Resources.Load<Settings>("System/Settings");
+        
 
         public static INavMeshAgent LoadNavMeshAgent(GameObject npc)
         {
@@ -16,6 +17,9 @@ namespace AISystem.Common.Objects
             {
                 case NAV_MODE.UNITY:
                     navMeshAgent = new UnityNavMeshAgent();
+                    break;
+                case NAV_MODE.LOVE:
+                    navMeshAgent = new INav();
                     break;
                 default:
                     Debug.LogError("No Nav Mode is selected!");

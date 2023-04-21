@@ -7,6 +7,7 @@ namespace AISystem.Common
     public enum NAV_MODE
     {
         NONE,
-        UNITY
+        UNITY,
+        LOVE
     }
 }

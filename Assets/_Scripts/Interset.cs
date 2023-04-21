@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using AISystem.Common.Objects;
 public class Interset : MonoBehaviour
 {
     public List<Sprite> icon;
+    public INavMeshAgent iNav;
     int childCount;
         void Start()
     {
@@ -14,7 +15,7 @@ public class Interset : MonoBehaviour
         {
             for (int j = 0; j < 2; j++)
             {
-                Debug.Log("2*i+j="+ (int)(2*i+j));
+                //Debug.Log("2*i+j="+ (int)(2*i+j));
                 Love love =transform.GetChild(2*i+j).GetComponent<Love>();
                 love.interest = i;
                 love.bubble.icon = icon[i];
@@ -23,4 +24,5 @@ public class Interset : MonoBehaviour
         }
 
     }
+
 }
