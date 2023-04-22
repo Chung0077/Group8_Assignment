@@ -14,6 +14,8 @@ public class Love : MonoBehaviour
     [SerializeField] GameObject bubblePrefab;
     public NavMeshAgent agent;
     public Transform loveTarget = null;
+    [SerializeField] GameObject heartPrefab;
+    Heart heart;
     public bool love
     {
         get{return _love;}
@@ -65,6 +67,8 @@ private void Start() {
                 LoveBow.shootedLove=this;
                 ani.SetTrigger("Love");
                 agent.isStopped=true; 
+                heart = Instantiate(heartPrefab,this.transform.position,heartPrefab.transform.rotation).GetComponent<Heart>();
+                heart.target = this.transform;
             }
             else if(LoveBow.shootedLove==this)
             {
@@ -72,6 +76,7 @@ private void Start() {
                 EnableAI(true);
                 ani.SetTrigger("UnLove");
                 agent.isStopped=false; 
+                if(heart)heart.UnLove();
             }
             else if(LoveBow.shootedLove!=this)
             {
@@ -81,6 +86,8 @@ private void Start() {
                 LoveBow.shootedLove.agent.isStopped = false;
                 LoveBow.shootedLove=null;
                 agent.isStopped=false; 
+                heart = Instantiate(heartPrefab,this.transform.position,heartPrefab.transform.rotation).GetComponent<Heart>();
+                heart.target = this.transform;
             }
         }
     }
@@ -96,12 +103,12 @@ private void Start() {
         Debug.Log("Collision: "+other.gameObject.name);
         if(other.transform.tag == "NPC")
         {
-        if(other.gameObject.transform == this.loveTarget.gameObject.transform)
-    {
+        if(this.loveTarget!=null && other.gameObject.transform == this.loveTarget.gameObject.transform)
+        {
         Debug.Log("kiss");
         ani.SetTrigger("Kiss");
-    }
-    }
+        }
+        }
     }
 /*
     private void OnCollisionEnter(Collision other) {

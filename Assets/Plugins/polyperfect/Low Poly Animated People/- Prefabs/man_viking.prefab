@@ -2447,6 +2447,8 @@ MonoBehaviour:
     type: 3}
   agent: {fileID: 0}
   loveTarget: {fileID: 0}
+  heartPrefab: {fileID: 4108282391311730767, guid: aebe4a112f93282429e50cd4a702d6bd,
+    type: 3}
 --- !u!1 &7292818959473395145
 GameObject:
   m_ObjectHideFlags: 0

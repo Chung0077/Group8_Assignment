@@ -12,6 +12,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
     [SerializeField]
     private GameObject stickingArrow;
+    [SerializeField] GameObject heartPrefab;
 
     private void OnCollisionEnter(Collision collision)
     {
