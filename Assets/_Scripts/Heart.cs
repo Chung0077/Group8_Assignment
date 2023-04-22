@@ -8,6 +8,7 @@ public class Heart : MonoBehaviour
     [SerializeField] float rotateSpeed = 1f;  
     [SerializeField] GameObject heart;
     public Transform target;
+    private Love targetLove;
 
     Material heartMat;
     private void Awake() {
@@ -28,6 +29,8 @@ public class Heart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(targetLove==null)targetLove= target.gameObject.GetComponent<Love>();
+        if(targetLove.heart!=this ||targetLove.heart == null)Destroy(this.transform);
         this.transform.position = target.transform.position;
         heart.transform.Rotate(Vector3.up*rotateSpeed*Time.deltaTime,Space.World);
     }

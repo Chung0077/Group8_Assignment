@@ -9,9 +9,10 @@ Shader "Heart"
 		[ASEBegin]_Smoothness("Smoothness", Float) = 1
 		[HDR]_BaseColor("BaseColor", Color) = (20.95821,4.646396,4.646396,0.7843137)
 		_Metallic("Metallic", Float) = 0
-		_Dissolve("Dissolve", Float) = 0
-		_Dissolve_Dir("Dissolve_Dir", Vector) = (0.15,0,0,0)
-		[ASEEnd][HDR]_FresnelColor("FresnelColor", Color) = (128,11.47169,128,1)
+		_Dissolve("Dissolve", Range( 0 , 1)) = 0.3
+		_Dissolve_Dir("Dissolve_Dir", Vector) = (0,1.32,0,0)
+		[HDR]_FresnelColor("FresnelColor", Color) = (128,11.47169,128,1)
+		[ASEEnd]_EdgeWidth("EdgeWidth", Float) = 1
 
 
 		//_TransmissionShadow( "Transmission Shadow", Range( 0, 1 ) ) = 0.5
@@ -289,9 +290,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -600,13 +602,16 @@ Shader "Heart"
 				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				
 				float fresnelNdotV155 = dot( WorldNormal, WorldViewDirection );
-				float fresnelNode155 = ( 0.0 + 10.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
-				
+				float fresnelNode155 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
 				float2 texCoord47 = IN.ase_texcoord8.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord9.xyz );
 				float grayscale80 = Luminance(pow( ( temp_output_128_0 * temp_output_128_0 * 0.5 ) , 10.0 ));
 				float temp_output_142_0 = ( ( ( simplePerlin2D67 + (-1.0 + (_Dissolve - 0.0) * (2.0 - -1.0) / (1.0 - 0.0)) ) * grayscale80 ) + ( 1.0 - grayscale80 ) );
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float4 temp_output_159_0 = ( _BaseColor + ( _FresnelColor * ( fresnelNode155 + temp_output_161_0 ) ) );
+				float4 switchResult228 = (((ase_vface>0)?(temp_output_159_0):(temp_output_159_0)));
+				
 				float ifLocalVar145 = 0;
 				if( temp_output_142_0 > 0.5 )
 				ifLocalVar145 = 1.0;
@@ -614,16 +619,18 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
 				float3 BaseColor = switchResult35.rgb;
 				float3 Normal = float3(0, 0, 1);
-				float3 Emission = ( switchResult35 + ( _FresnelColor * fresnelNode155 ) ).rgb;
+				float3 Emission = switchResult228.rgb;
 				float3 Specular = 0.5;
 				float Metallic = _Metallic;
 				float Smoothness = _Smoothness;
 				float Occlusion = 1;
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 				float3 BakedGI = 0;
@@ -926,9 +933,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -1191,7 +1199,6 @@ Shader "Heart"
 					#endif
 				#endif
 
-				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				float2 texCoord47 = IN.ase_texcoord2.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord3.xyz );
@@ -1204,9 +1211,12 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 
@@ -1308,9 +1318,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -1555,7 +1566,6 @@ Shader "Heart"
 					#endif
 				#endif
 
-				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				float2 texCoord47 = IN.ase_texcoord2.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord3.xyz );
@@ -1568,9 +1578,12 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 				#ifdef ASE_DEPTH_WRITE_ON
 					float DepthValue = 0;
@@ -1670,9 +1683,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -1930,13 +1944,16 @@ Shader "Heart"
 				ase_worldViewDir = normalize(ase_worldViewDir);
 				float3 ase_worldNormal = IN.ase_texcoord4.xyz;
 				float fresnelNdotV155 = dot( ase_worldNormal, ase_worldViewDir );
-				float fresnelNode155 = ( 0.0 + 10.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
-				
+				float fresnelNode155 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
 				float2 texCoord47 = IN.ase_texcoord5.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord6.xyz );
 				float grayscale80 = Luminance(pow( ( temp_output_128_0 * temp_output_128_0 * 0.5 ) , 10.0 ));
 				float temp_output_142_0 = ( ( ( simplePerlin2D67 + (-1.0 + (_Dissolve - 0.0) * (2.0 - -1.0) / (1.0 - 0.0)) ) * grayscale80 ) + ( 1.0 - grayscale80 ) );
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float4 temp_output_159_0 = ( _BaseColor + ( _FresnelColor * ( fresnelNode155 + temp_output_161_0 ) ) );
+				float4 switchResult228 = (((ase_vface>0)?(temp_output_159_0):(temp_output_159_0)));
+				
 				float ifLocalVar145 = 0;
 				if( temp_output_142_0 > 0.5 )
 				ifLocalVar145 = 1.0;
@@ -1944,11 +1961,13 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
 				float3 BaseColor = switchResult35.rgb;
-				float3 Emission = ( switchResult35 + ( _FresnelColor * fresnelNode155 ) ).rgb;
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float3 Emission = switchResult228.rgb;
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 
 				#ifdef _ALPHATEST_ON
@@ -2038,9 +2057,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -2290,10 +2310,13 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
 				float3 BaseColor = switchResult35.rgb;
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 
 				half4 color = half4(BaseColor, Alpha );
@@ -2385,9 +2408,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -2638,7 +2662,6 @@ Shader "Heart"
 					#endif
 				#endif
 
-				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				float2 texCoord47 = IN.ase_texcoord4.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord5.xyz );
@@ -2651,10 +2674,13 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
 				float3 Normal = float3(0, 0, 1);
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 				#ifdef ASE_DEPTH_WRITE_ON
 					float DepthValue = 0;
@@ -2813,9 +2839,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -3117,13 +3144,16 @@ Shader "Heart"
 				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				
 				float fresnelNdotV155 = dot( WorldNormal, WorldViewDirection );
-				float fresnelNode155 = ( 0.0 + 10.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
-				
+				float fresnelNode155 = ( 0.0 + 1.0 * pow( 1.0 - fresnelNdotV155, 10.0 ) );
 				float2 texCoord47 = IN.ase_texcoord8.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord9.xyz );
 				float grayscale80 = Luminance(pow( ( temp_output_128_0 * temp_output_128_0 * 0.5 ) , 10.0 ));
 				float temp_output_142_0 = ( ( ( simplePerlin2D67 + (-1.0 + (_Dissolve - 0.0) * (2.0 - -1.0) / (1.0 - 0.0)) ) * grayscale80 ) + ( 1.0 - grayscale80 ) );
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float4 temp_output_159_0 = ( _BaseColor + ( _FresnelColor * ( fresnelNode155 + temp_output_161_0 ) ) );
+				float4 switchResult228 = (((ase_vface>0)?(temp_output_159_0):(temp_output_159_0)));
+				
 				float ifLocalVar145 = 0;
 				if( temp_output_142_0 > 0.5 )
 				ifLocalVar145 = 1.0;
@@ -3131,16 +3161,18 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
 				float3 BaseColor = switchResult35.rgb;
 				float3 Normal = float3(0, 0, 1);
-				float3 Emission = ( switchResult35 + ( _FresnelColor * fresnelNode155 ) ).rgb;
+				float3 Emission = switchResult228.rgb;
 				float3 Specular = 0.5;
 				float Metallic = _Metallic;
 				float Smoothness = _Smoothness;
 				float Occlusion = 1;
-				float Alpha = ( switchResult35.a * ifLocalVar145 );
+				float Alpha = switchResult229;
 				float AlphaClipThreshold = 0.5;
 				float AlphaClipThresholdShadow = 0.5;
 				float3 BakedGI = 0;
@@ -3307,9 +3339,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -3526,7 +3559,6 @@ Shader "Heart"
 			{
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
-				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				float2 texCoord47 = IN.ase_texcoord.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord1.xyz );
@@ -3539,9 +3571,12 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
-				surfaceDescription.Alpha = ( switchResult35.a * ifLocalVar145 );
+				surfaceDescription.Alpha = switchResult229;
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -3628,9 +3663,10 @@ Shader "Heart"
 			float4 _BaseColor;
 			float4 _FresnelColor;
 			float3 _Dissolve_Dir;
+			float _Dissolve;
+			float _EdgeWidth;
 			float _Metallic;
 			float _Smoothness;
-			float _Dissolve;
 			#ifdef ASE_TRANSMISSION
 				float _TransmissionShadow;
 			#endif
@@ -3846,7 +3882,6 @@ Shader "Heart"
 			{
 				SurfaceDescription surfaceDescription = (SurfaceDescription)0;
 
-				float4 switchResult35 = (((ase_vface>0)?(_BaseColor):(_BaseColor)));
 				float2 texCoord47 = IN.ase_texcoord.xy * float2( 10,10 ) + float2( 0,0 );
 				float simplePerlin2D67 = snoise( texCoord47 );
 				float3 temp_output_128_0 = ( _Dissolve_Dir + IN.ase_texcoord1.xyz );
@@ -3859,9 +3894,12 @@ Shader "Heart"
 				ifLocalVar145 = temp_output_142_0;
 				else if( temp_output_142_0 < 0.5 )
 				ifLocalVar145 = 0.0;
+				float temp_output_161_0 = ( ( 1.0 - step( temp_output_142_0 , 0.0 ) ) - ( 1.0 - step( ( temp_output_142_0 + _EdgeWidth ) , 1.0 ) ) );
+				float temp_output_167_0 = ( ( _BaseColor.a * ifLocalVar145 ) + temp_output_161_0 );
+				float switchResult229 = (((ase_vface>0)?(temp_output_167_0):(temp_output_167_0)));
 				
 
-				surfaceDescription.Alpha = ( switchResult35.a * ifLocalVar145 );
+				surfaceDescription.Alpha = switchResult229;
 				surfaceDescription.AlphaClipThreshold = 0.5;
 
 				#if _ALPHATEST_ON
@@ -3904,87 +3942,112 @@ Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;6;0,0;Float;False;False;-1;
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;7;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;GBuffer;0;7;GBuffer;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;3;True;12;all;0;False;True;1;5;False;;10;False;;1;1;False;;10;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalGBuffer;False;False;0;;0;0;Standard;0;False;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;8;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;SceneSelectionPass;0;8;SceneSelectionPass;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;3;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=SceneSelectionPass;False;False;0;;0;0;Standard;0;False;0
 Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;9;0,0;Float;False;False;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;New Amplify Shader;94348b07e5e8bab40bd6c8a1e3df54cd;True;ScenePickingPass;0;9;ScenePickingPass;0;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;0;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;False;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;3;RenderPipeline=UniversalPipeline;RenderType=Opaque=RenderType;Queue=Geometry=Queue=0;True;3;True;12;all;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;1;LightMode=Picking;False;False;0;;0;0;Standard;0;False;0
-Node;AmplifyShaderEditor.RangedFloatNode;14;-283.459,118.6465;Inherit;False;Property;_Smoothness;Smoothness;0;0;Create;True;0;0;0;False;0;False;1;0.5;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;17;-263.459,44.6465;Inherit;False;Property;_Metallic;Metallic;2;0;Create;True;0;0;0;False;0;False;0;1;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.SwitchByFaceNode;35;-331.2439,-134.4145;Inherit;False;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.BreakToComponentsNode;36;-119.2439,-37.41452;Inherit;False;COLOR;1;0;COLOR;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15
 Node;AmplifyShaderEditor.NormalVertexDataNode;19;-305.3743,920.813;Inherit;False;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.SimpleMultiplyOpNode;20;155.6257,955.813;Inherit;False;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;-1,-1,-1;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SwitchByFaceNode;18;119.541,743.6465;Inherit;False;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.SimpleTimeNode;71;-2817.54,231.5189;Inherit;False;1;0;FLOAT;1;False;1;FLOAT;0
 Node;AmplifyShaderEditor.TextureCoordinatesNode;47;-2359.906,-4.082729;Inherit;True;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.PannerNode;72;-2646.831,193.4472;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;0,-1;False;1;FLOAT;1;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.RangedFloatNode;74;-1190.872,1338.628;Inherit;False;Constant;_Float1;Float 1;5;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.Vector2Node;69;-2604.618,42.70402;Inherit;False;Constant;_Vector0;Vector 0;5;0;Create;True;0;0;0;False;0;False;10,10;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.RangedFloatNode;70;-2985.792,221.694;Inherit;False;Property;_Float0;Float 0;5;0;Create;True;0;0;0;False;0;False;1;-12.62;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.RangedFloatNode;32;-1351.869,419.8916;Inherit;True;Property;_Dissolve;Dissolve;3;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TFHCGrayscale;59;-217.7695,236.8736;Inherit;False;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.NoiseGeneratorNode;67;-1908.206,-96.25398;Inherit;True;Simplex2D;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT;0
-Node;AmplifyShaderEditor.TFHCGrayscale;80;-711.0998,734.6141;Inherit;True;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;142;-398.8319,543.04;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;146;-242.2791,697.9798;Inherit;False;Constant;_Float2;Float 2;6;0;Create;True;0;0;0;False;0;False;1;0;0;0;0;1;FLOAT;0
 Node;AmplifyShaderEditor.RangedFloatNode;147;-222.7791,786.3798;Inherit;False;Constant;_Float3;Float 2;6;0;Create;True;0;0;0;False;0;False;0;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.ConditionalIfNode;145;-93.4818,411.1311;Inherit;True;False;5;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;24;92.41253,160.8497;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.ViewDirInputsCoordNode;63;-1537.67,452.885;Inherit;False;Tangent;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.TFHCRemapNode;39;-1129.256,458.4009;Inherit;True;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;-1;False;4;FLOAT;2;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;143;-665.9105,364.7147;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.SimpleAddOpNode;148;-873.3376,418.1316;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.Vector3Node;41;-2124.862,853.2347;Inherit;False;Property;_Dissolve_Dir;Dissolve_Dir;4;0;Create;True;0;0;0;False;0;False;0.15,0,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
-Node;AmplifyShaderEditor.TFHCRemapNode;149;-1757.752,818.4171;Inherit;False;5;0;FLOAT3;0,0,0;False;1;FLOAT3;-1,-1,-1;False;2;FLOAT3;1,1,1;False;3;FLOAT3;-1.5,-1.5,-1.5;False;4;FLOAT3;1.5,1.5,1.5;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.PowerNode;141;-981.158,740.8064;Inherit;True;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;10;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.OneMinusNode;150;-519.4528,728.9616;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
-Node;AmplifyShaderEditor.PosVertexDataNode;40;-2000.558,575.1376;Inherit;True;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleAddOpNode;128;-1518.486,824.5709;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;140;-1189.983,779.1119;Inherit;False;3;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0
-Node;AmplifyShaderEditor.RangedFloatNode;154;-1281.188,917.9915;Inherit;False;Constant;_Float4;Float 4;6;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;317,-23;Float;False;True;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;Heart;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;19;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;2;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;True;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;3;RenderPipeline=UniversalPipeline;RenderType=Transparent=RenderType;Queue=Transparent=Queue=0;True;3;True;12;all;0;False;True;1;5;False;;10;False;;1;1;False;;10;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;True;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalForward;False;False;0;;0;0;Standard;41;Workflow;1;0;Surface;1;638176993598220236;  Refraction Model;0;0;  Blend;0;0;Two Sided;0;638176993665060023;Fragment Normal Space,InvertActionOnDeselection;0;0;Forward Only;0;0;Transmission;0;0;  Transmission Shadow;0.5,False,;0;Translucency;0;0;  Translucency Strength;1,False,;0;  Normal Distortion;0.5,False,;0;  Scattering;2,False,;0;  Direct;0.9,False,;0;  Ambient;0.1,False,;0;  Shadow;0.5,False,;0;Cast Shadows;1;0;  Use Shadow Threshold;0;0;Receive Shadows;1;0;GPU Instancing;1;0;LOD CrossFade;1;0;Built-in Fog;1;0;_FinalColorxAlpha;0;0;Meta Pass;1;0;Override Baked GI;0;0;Extra Pre Pass;0;0;DOTS Instancing;0;0;Tessellation;0;638177025870504835;  Phong;0;0;  Strength;0.5,False,;0;  Type;0;0;  Tess;16,False,;0;  Min;10,False,;0;  Max;25,False,;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;638177338825959596;  Early Z;0;638177024639107848;Vertex Position,InvertActionOnDeselection;0;638177024858459499;Debug Display;0;0;Clear Coat;0;0;0;10;False;True;True;True;True;True;True;True;True;True;False;;False;0
-Node;AmplifyShaderEditor.SimpleMultiplyOpNode;157;-357.3624,130.0986;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;158;-644.2175,44.12015;Inherit;False;Property;_FresnelColor;FresnelColor;6;1;[HDR];Create;True;0;0;0;False;0;False;128,11.47169,128,1;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.SimpleAddOpNode;159;91.78247,20.12015;Inherit;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
-Node;AmplifyShaderEditor.ColorNode;10;-612.8712,-147.1966;Inherit;False;Property;_BaseColor;BaseColor;1;1;[HDR];Create;True;0;0;0;True;0;False;20.95821,4.646396,4.646396,0.7843137;2,0,0,0.7843137;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.FresnelNode;155;-755.2432,197.4702;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;10;False;3;FLOAT;10;False;1;FLOAT;0
-WireConnection;35;0;10;0
-WireConnection;35;1;10;0
-WireConnection;36;0;35;0
+Node;AmplifyShaderEditor.ColorNode;10;-612.8712,-147.1966;Inherit;False;Property;_BaseColor;BaseColor;1;1;[HDR];Create;True;0;0;0;True;0;False;20.95821,4.646396,4.646396,0.7843137;1,0,0,0.4039216;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ViewDirInputsCoordNode;63;-2519.749,524.2094;Inherit;False;Tangent;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.TFHCRemapNode;149;-2739.831,889.7413;Inherit;False;5;0;FLOAT3;0,0,0;False;1;FLOAT3;-1,-1,-1;False;2;FLOAT3;1,1,1;False;3;FLOAT3;-1.5,-1.5,-1.5;False;4;FLOAT3;1.5,1.5,1.5;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;128;-2500.564,895.8951;Inherit;True;2;2;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;140;-2172.062,850.4361;Inherit;False;3;3;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT;0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.RangedFloatNode;154;-2263.266,989.3157;Inherit;False;Constant;_Float4;Float 4;6;0;Create;True;0;0;0;False;0;False;0.5;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.PosVertexDataNode;40;-3043.817,620.5782;Inherit;True;0;0;5;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.TFHCRemapNode;39;-2111.334,529.7253;Inherit;True;5;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;-1;False;4;FLOAT;2;False;1;FLOAT;0
+Node;AmplifyShaderEditor.PowerNode;141;-1961.932,813.4359;Inherit;True;False;2;0;FLOAT3;0,0,0;False;1;FLOAT;10;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;142;-1231.646,589.5832;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.ConditionalIfNode;145;-211.824,498.4447;Inherit;True;False;5;0;FLOAT;0;False;1;FLOAT;0.5;False;2;FLOAT;0;False;3;FLOAT;0;False;4;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.NoiseGeneratorNode;67;-2078.097,185.4638;Inherit;True;Simplex2D;False;False;2;0;FLOAT2;0,0;False;1;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;148;-1823.563,559.9996;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;143;-1512.819,564.79;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.TFHCGrayscale;80;-1717.937,813.6321;Inherit;True;0;1;0;FLOAT3;0,0,0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.OneMinusNode;150;-1393.805,763.5281;Inherit;True;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.ColorNode;158;-1217.839,-45.3327;Inherit;False;Property;_FresnelColor;FresnelColor;6;1;[HDR];Create;True;0;0;0;False;0;False;128,11.47169,128,1;5.992157,0.5370325,5.992157,1;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.FresnelNode;155;-1187.864,137.0174;Inherit;True;Standard;WorldNormal;ViewDir;False;False;5;0;FLOAT3;0,0,1;False;4;FLOAT3;0,0,0;False;1;FLOAT;0;False;2;FLOAT;1;False;3;FLOAT;10;False;1;FLOAT;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;849.2483,-32.48917;Float;False;True;-1;2;UnityEditor.ShaderGraphLitGUI;0;12;Heart;94348b07e5e8bab40bd6c8a1e3df54cd;True;Forward;0;1;Forward;19;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;;False;True;2;False;;False;False;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;True;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;3;RenderPipeline=UniversalPipeline;RenderType=Transparent=RenderType;Queue=Transparent=Queue=0;True;3;True;12;all;0;False;True;1;5;False;;10;False;;1;1;False;;10;False;;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;True;True;True;True;0;False;;False;False;False;False;False;False;False;True;False;0;False;;255;False;;255;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;0;False;;True;True;1;False;;True;3;False;;True;True;0;False;;0;False;;True;1;LightMode=UniversalForward;False;False;0;;0;0;Standard;41;Workflow;1;0;Surface;1;638176993598220236;  Refraction Model;0;0;  Blend;0;0;Two Sided;0;638177853909103617;Fragment Normal Space,InvertActionOnDeselection;0;0;Forward Only;0;0;Transmission;0;0;  Transmission Shadow;0.5,False,;0;Translucency;0;0;  Translucency Strength;1,False,;0;  Normal Distortion;0.5,False,;0;  Scattering;2,False,;0;  Direct;0.9,False,;0;  Ambient;0.1,False,;0;  Shadow;0.5,False,;0;Cast Shadows;1;0;  Use Shadow Threshold;0;0;Receive Shadows;1;0;GPU Instancing;1;0;LOD CrossFade;1;0;Built-in Fog;1;0;_FinalColorxAlpha;0;0;Meta Pass;1;0;Override Baked GI;0;0;Extra Pre Pass;0;0;DOTS Instancing;0;0;Tessellation;0;638177025870504835;  Phong;0;0;  Strength;0.5,False,;0;  Type;0;0;  Tess;16,False,;0;  Min;10,False,;0;  Max;25,False,;0;  Edge Length;16,False,;0;  Max Displacement;25,False,;0;Write Depth;0;638177338825959596;  Early Z;0;638177024639107848;Vertex Position,InvertActionOnDeselection;0;638177024858459499;Debug Display;0;0;Clear Coat;0;0;0;10;False;True;True;True;True;True;True;True;True;True;False;;False;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;159;246.105,8.90612;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.BreakToComponentsNode;36;0.7561035,260.5855;Inherit;False;COLOR;1;0;COLOR;0,0,0,0;False;16;FLOAT;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4;FLOAT;5;FLOAT;6;FLOAT;7;FLOAT;8;FLOAT;9;FLOAT;10;FLOAT;11;FLOAT;12;FLOAT;13;FLOAT;14;FLOAT;15
+Node;AmplifyShaderEditor.RangedFloatNode;14;640.541,197.6465;Inherit;False;Property;_Smoothness;Smoothness;0;0;Create;True;0;0;0;False;0;False;1;0.5;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;17;704.6526,113.4485;Inherit;False;Property;_Metallic;Metallic;2;0;Create;True;0;0;0;False;0;False;0;1;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SwitchByFaceNode;35;663.6698,-68.94324;Inherit;False;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SwitchByFaceNode;228;512.2878,23.39038;Inherit;False;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.Vector3Node;41;-3105.641,927.1589;Inherit;False;Property;_Dissolve_Dir;Dissolve_Dir;4;0;Create;True;0;0;0;False;0;False;0,1.32,0;0,0,0;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
+Node;AmplifyShaderEditor.RangedFloatNode;32;-2292.865,489.1209;Inherit;True;Property;_Dissolve;Dissolve;3;0;Create;True;0;0;0;False;0;False;0.3;0.333;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;224;-568.2821,191.7841;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.StepOpNode;163;-987.7496,690.2839;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;168;-1211.795,1020.209;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;162;-1427.505,1038.681;Inherit;False;Property;_EdgeWidth;EdgeWidth;7;0;Create;True;0;0;0;False;0;False;1;0.52;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.StepOpNode;169;-950.1366,953.4943;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;1;False;1;FLOAT;0
+Node;AmplifyShaderEditor.OneMinusNode;230;-661.2155,757.6783;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.OneMinusNode;231;-706.2155,950.6783;Inherit;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleSubtractOpNode;161;-543.4733,900.2146;Inherit;True;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;157;-309.384,73.2459;Inherit;True;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SwitchByFaceNode;229;469.2634,211.0082;Inherit;False;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;24;72.77462,448.3861;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;167;224.4691,235.6013;Inherit;True;2;2;0;FLOAT;0;False;1;FLOAT;0;False;1;FLOAT;0
 WireConnection;20;0;19;0
 WireConnection;18;0;19;0
 WireConnection;18;1;20;0
 WireConnection;71;0;70;0
 WireConnection;47;0;69;0
 WireConnection;72;1;71;0
-WireConnection;67;0;47;0
-WireConnection;80;0;141;0
+WireConnection;149;0;41;0
+WireConnection;128;0;41;0
+WireConnection;128;1;40;0
+WireConnection;140;0;128;0
+WireConnection;140;1;128;0
+WireConnection;140;2;154;0
+WireConnection;39;0;32;0
+WireConnection;141;0;140;0
 WireConnection;142;0;143;0
 WireConnection;142;1;150;0
 WireConnection;145;0;142;0
 WireConnection;145;2;146;0
 WireConnection;145;3;142;0
 WireConnection;145;4;147;0
-WireConnection;24;0;36;3
-WireConnection;24;1;145;0
-WireConnection;39;0;32;0
-WireConnection;143;0;148;0
-WireConnection;143;1;80;0
+WireConnection;67;0;47;0
 WireConnection;148;0;67;0
 WireConnection;148;1;39;0
-WireConnection;149;0;41;0
-WireConnection;141;0;140;0
+WireConnection;143;0;148;0
+WireConnection;143;1;80;0
+WireConnection;80;0;141;0
 WireConnection;150;0;80;0
-WireConnection;128;0;41;0
-WireConnection;128;1;40;0
-WireConnection;140;0;128;0
-WireConnection;140;1;128;0
-WireConnection;140;2;154;0
 WireConnection;1;0;35;0
-WireConnection;1;2;159;0
+WireConnection;1;2;228;0
 WireConnection;1;3;17;0
 WireConnection;1;4;14;0
-WireConnection;1;6;24;0
+WireConnection;1;6;229;0
 WireConnection;1;10;18;0
-WireConnection;157;0;158;0
-WireConnection;157;1;155;0
-WireConnection;159;0;35;0
+WireConnection;159;0;10;0
 WireConnection;159;1;157;0
+WireConnection;36;0;10;0
+WireConnection;35;0;10;0
+WireConnection;35;1;10;0
+WireConnection;228;0;159;0
+WireConnection;228;1;159;0
+WireConnection;224;0;155;0
+WireConnection;224;1;161;0
+WireConnection;163;0;142;0
+WireConnection;168;0;142;0
+WireConnection;168;1;162;0
+WireConnection;169;0;168;0
+WireConnection;230;0;163;0
+WireConnection;231;0;169;0
+WireConnection;161;0;230;0
+WireConnection;161;1;231;0
+WireConnection;157;0;158;0
+WireConnection;157;1;224;0
+WireConnection;229;0;167;0
+WireConnection;229;1;167;0
+WireConnection;24;0;36;3
+WireConnection;24;1;145;0
+WireConnection;167;0;24;0
+WireConnection;167;1;161;0
 ASEEND*/
-//CHKSM=247524FE9AADD61B61313BB08C5BDC897AA4B5CA
+//CHKSM=35C8AC709396482841E5A7C1F39086025E425075

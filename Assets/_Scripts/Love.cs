@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
-
 public class Love : MonoBehaviour
 {
     AISystem.ItemSystem.Item items;
@@ -15,7 +14,7 @@ public class Love : MonoBehaviour
     public NavMeshAgent agent;
     public Transform loveTarget = null;
     [SerializeField] GameObject heartPrefab;
-    Heart heart;
+    public Heart heart;
     public bool love
     {
         get{return _love;}
@@ -76,7 +75,7 @@ private void Start() {
                 EnableAI(true);
                 ani.SetTrigger("UnLove");
                 agent.isStopped=false; 
-                if(heart)heart.UnLove();
+                if(heart !=null)heart.UnLove();
             }
             else if(LoveBow.shootedLove!=this)
             {
@@ -110,6 +109,28 @@ private void Start() {
         }
         }
     }
+
+        public void Match()
+        {
+            if(interest==loveTarget.GetComponent<Love>().interest)
+            {
+                this.gameObject.GetComponent<Collider>().enabled=false;
+            }
+            else
+            {
+                if(heart)heart.UnLove();
+                ani.SetTrigger("UnLove");
+            }
+        }
+
+        public void Single(){
+            loveTarget=null;
+            LoveBow.shootedLove=null;
+            EnableAI(true);
+            ani.SetTrigger("UnLove");
+            agent.isStopped=false; 
+            if(heart)heart.UnLove();
+        }
 /*
     private void OnCollisionEnter(Collision other) {
                 Debug.Log("Collision");

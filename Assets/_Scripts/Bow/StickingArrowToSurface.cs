@@ -12,6 +12,7 @@ public class StickingArrowToSurface : MonoBehaviour
 
     [SerializeField]
     private GameObject stickingArrow;
+    private bool makeLove = false;
     [SerializeField] GameObject heartPrefab;
 
     private void OnCollisionEnter(Collision collision)
@@ -19,8 +20,9 @@ public class StickingArrowToSurface : MonoBehaviour
         rb.isKinematic = true;
         myCollider.isTrigger = true;
 
-        if(collision.transform.tag!="NPC")
+        if(collision.transform.tag!="NPC" && makeLove==false)
         {
+            makeLove=true;
             GameObject arrow = Instantiate(stickingArrow);
             arrow.transform.position = transform.position;
             arrow.transform.forward = transform.forward;
