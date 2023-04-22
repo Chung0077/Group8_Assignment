@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Starting UI.unity
     guid: 5c5b55d317bbb1f4cba115c25bbde5d6
   - enabled: 1
-    path: Assets/Scenes/ArcheryScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/LEVEL0 2.unity
+    guid: 1356299ec4174c54ea4db5f249618782
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 09095bd8a17dae34899c9cc9dc469558,
       type: 2}

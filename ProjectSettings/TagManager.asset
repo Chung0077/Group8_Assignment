@@ -17,6 +17,7 @@ TagManager:
   - NPC
   - Left
   - Right
+  - Grab
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Civil
   - Resource
   - NPC
-  - 
+  - Air
   - 
   - 
   - 

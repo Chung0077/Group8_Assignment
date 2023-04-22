@@ -17,7 +17,15 @@ public class LoveBow : MonoBehaviour
         grab.selectExited.AddListener(ReleaseBow);
     }
 
-    // Update is called once per frame
+    private void Update() {
+        if(grab.isSelected)
+        {
+            bowString.SetActive(true);
+        }else
+        {
+            bowString.SetActive(false);
+        }
+    }
 
     private void GrabBow(SelectEnterEventArgs arg0)
     {
@@ -31,4 +39,5 @@ public class LoveBow : MonoBehaviour
         interactor = arg0.interactorObject.transform;
         bowString.SetActive(false);
     }
+
 }
