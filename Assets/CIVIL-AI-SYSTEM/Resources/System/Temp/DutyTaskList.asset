@@ -23,7 +23,7 @@ MonoBehaviour:
         rid: -2
     iterator: 1
     globalWeighting: 0
-    localWeighting: 0
+    localWeighting: 0.5
     name: Find area
     desc: testing
   - id: 703e8d3e-5824-4c5d-b4fa-f86177ef882a
@@ -36,7 +36,7 @@ MonoBehaviour:
         rid: -2
     iterator: 1
     globalWeighting: 0
-    localWeighting: 0
+    localWeighting: 0.5
     name: Find Shop
     desc: testing
   - id: c60cf972-d334-418b-a5b2-657ac0eba24a
@@ -46,7 +46,7 @@ MonoBehaviour:
         rid: -2
     iterator: 1
     globalWeighting: 0
-    localWeighting: 0
+    localWeighting: 0.5
     name: Find Chair
     desc: testing
   references:

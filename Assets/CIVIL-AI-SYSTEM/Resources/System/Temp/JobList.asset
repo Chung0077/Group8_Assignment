@@ -18,7 +18,7 @@ MonoBehaviour:
     - guid: f441fa0e-9d9c-4e05-9c45-ee5c968f7514
       requirementData:
         rid: -2
-    iterator: 5
+    iterator: 0
     globalWeighting: 0.5
     localWeighting: 0.5
     name: Walker

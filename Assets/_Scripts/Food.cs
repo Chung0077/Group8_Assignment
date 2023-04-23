@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-private void OnCollisionExit(Collision other) {
-    if(other.transform.tag=="NPC")Destroy(this.gameObject);
+    void Update()
+    {
+        if(this.transform.parent==null)EatFood();
+    }
+public void EatFood() {
+    Destroy(this.gameObject);
 }
 }

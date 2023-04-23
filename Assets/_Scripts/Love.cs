@@ -15,6 +15,7 @@ public class Love : MonoBehaviour
     public Transform loveTarget = null;
     [SerializeField] GameObject heartPrefab;
     public Heart heart;
+    public Food food;
     public bool love
     {
         get{return _love;}
@@ -174,4 +175,5 @@ private void Start() {
             }
         }
     }
+
 }
