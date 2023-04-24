@@ -106,7 +106,7 @@ private void Start() {
     }
 
     private void OnCollisionEnter(Collision other) {
-        //Debug.Log("Collision: "+other.gameObject.name);
+        Debug.Log("Collision: "+other.gameObject.name);
         if(other.transform.tag == "NPC")
         {
         if(this.loveTarget!=null && other.gameObject.transform == this.loveTarget.gameObject.transform)

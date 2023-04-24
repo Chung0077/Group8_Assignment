@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 1276748836716480274}
   - component: {fileID: 7025423100255474978}
   - component: {fileID: 8211837946165731233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\u041A\u0440\u0438\u0432\u0430\u044F\u0411\u0435\u0437\u044C\u0435"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 5165320555707725241}
   - component: {fileID: 6064192228212378201}
   - component: {fileID: 5231509177038963740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

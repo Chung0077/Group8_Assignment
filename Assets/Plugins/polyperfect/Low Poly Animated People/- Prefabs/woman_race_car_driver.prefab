@@ -1392,7 +1392,6 @@ GameObject:
   - component: {fileID: 3716496310497903705}
   - component: {fileID: 8818642203355568774}
   - component: {fileID: -5719259059982782114}
-  - component: {fileID: -3793450557470208509}
   - component: {fileID: -4255565388036305297}
   m_Layer: 10
   m_Name: woman_race_car_driver
@@ -1452,7 +1451,7 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 200
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1565,7 +1564,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 126
@@ -1593,23 +1592,6 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &-3793450557470208509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3836216119717225421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 476dff41af6b6264f964072c5d88d104, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemName: 0
-  type: 0
-  quanity: 0
-  inUse: 0
-  interaction: {fileID: 0}
 --- !u!114 &-4255565388036305297
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,8 +23,8 @@ MonoBehaviour:
     localWeighting: 0.5
     name: Walker
     desc: stuff
-    startTime: 800
-    endTime: 1500
+    startTime: 0
+    endTime: 2400
     weighting: 0
     useGlobals: 1
     checkIn: 0
