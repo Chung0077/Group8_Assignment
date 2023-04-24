@@ -8,6 +8,7 @@ public class Love : MonoBehaviour
     AISystem.ItemSystem.Item items;
     AISystem.Civil.NeedSystem.NeedController need;
     [SerializeField] Transform head;
+    public int sexal;
     public int interest; 
     public Bubble bubble;
     [SerializeField] GameObject bubblePrefab;
@@ -124,6 +125,30 @@ private void Start() {
             {
                 this.gameObject.GetComponent<Collider>().enabled=false;
                 bubble.gameObject.SetActive(false);
+                AudioSource aS;
+                if(this.gameObject.GetComponent<AudioSource>()==null)
+                {
+                    aS = this.gameObject.AddComponent<AudioSource>();
+                }
+                else
+                {
+                     aS = this.gameObject.GetComponent<AudioSource>();
+                }
+                aS.playOnAwake=false;
+
+                if(sexal==0)
+                {
+                    List<AudioClip> aC = GetComponentInParent<Interset>().manVoice;
+                    int num= Random.Range(0,aC.Count-1);
+                    aS.clip=aC[num];
+                }
+                else
+                {
+                    List<AudioClip> aC = GetComponentInParent<Interset>().womanVoice;
+                    int num= Random.Range(0,aC.Count-1);
+                    aS.clip=aC[num];
+                }
+                aS.Play();
             }
             else
             {

@@ -5,6 +5,8 @@ using AISystem.Common.Objects;
 public class Interset : MonoBehaviour
 {
     public List<Sprite> icon;
+    public List<AudioClip> manVoice;
+    public List<AudioClip> womanVoice;
     public INavMeshAgent iNav;
     int childCount;
         void Start()

@@ -909,6 +909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   head: {fileID: 9117382539739747001}
+  sexal: 1
   interest: 0
   bubble: {fileID: 0}
   bubblePrefab: {fileID: 335759975735007898, guid: 8ca60ea31dc4fcb4ab2f14f44e5b5345,
@@ -923,6 +924,7 @@ MonoBehaviour:
   bigHeart: {fileID: 0}
   bigHeartPrefab: {fileID: 4108282391311730767, guid: 58099c68d166daf4a9602f6e03d11dce,
     type: 3}
+  ani: {fileID: 0}
 --- !u!1 &2022031236683616954
 GameObject:
   m_ObjectHideFlags: 0
