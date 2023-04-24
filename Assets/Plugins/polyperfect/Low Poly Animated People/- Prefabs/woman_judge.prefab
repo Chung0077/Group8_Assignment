@@ -1203,6 +1203,12 @@ MonoBehaviour:
   loveTarget: {fileID: 0}
   heartPrefab: {fileID: 4108282391311730767, guid: aebe4a112f93282429e50cd4a702d6bd,
     type: 3}
+  heart: {fileID: 0}
+  food: {fileID: 0}
+  hug: 0
+  bigHeart: {fileID: 0}
+  bigHeartPrefab: {fileID: 4108282391311730767, guid: 58099c68d166daf4a9602f6e03d11dce,
+    type: 3}
 --- !u!1 &3192870362984658249
 GameObject:
   m_ObjectHideFlags: 0

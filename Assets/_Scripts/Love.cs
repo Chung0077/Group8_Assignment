@@ -16,15 +16,20 @@ public class Love : MonoBehaviour
     [SerializeField] GameObject heartPrefab;
     public Heart heart;
     public Food food;
+    public bool hug = false;
+    public BigHeart bigHeart = null;
+    [SerializeField]GameObject bigHeartPrefab;
+    LevelManager lm;
     public bool love
     {
         get{return _love;}
         set{_love = value; FallLove(_love);}
     }
     private bool _love = false;
-    Animator ani;
+    public Animator ani;
     void Awake()
     {
+        lm = Camera.main.transform.GetComponentInChildren<LevelManager>();
         bubble = Instantiate(bubblePrefab, this.transform).gameObject.GetComponent<Bubble>();
         bubble.target = head;
         ani = this.gameObject.GetComponent<Animator>();
@@ -100,7 +105,7 @@ private void Start() {
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Collision: "+other.gameObject.name);
+        //Debug.Log("Collision: "+other.gameObject.name);
         if(other.transform.tag == "NPC")
         {
         if(this.loveTarget!=null && other.gameObject.transform == this.loveTarget.gameObject.transform)
@@ -113,24 +118,30 @@ private void Start() {
 
         public void Match()
         {
+            heart.BigHeart();
+            hug=true;
             if(interest==loveTarget.GetComponent<Love>().interest)
             {
                 this.gameObject.GetComponent<Collider>().enabled=false;
+                bubble.gameObject.SetActive(false);
             }
             else
             {
                 if(heart)heart.UnLove();
                 ani.SetTrigger("UnLove");
             }
+
         }
 
-        public void Single(){
-            loveTarget=null;
+        public void Single()
+        {
             LoveBow.shootedLove=null;
             EnableAI(true);
             ani.SetTrigger("UnLove");
+            ani.SetBool("Hug",false);
             agent.isStopped=false; 
             if(heart)heart.UnLove();
+            loveTarget=null;
         }
 /*
     private void OnCollisionEnter(Collision other) {
@@ -173,6 +184,26 @@ private void Start() {
                 transform.LookAt(loveTarget.transform.position);
                 //agent.speed=0; 
             }
+            if(hug==true && loveTarget.GetComponent<Love>().hug==true)
+            {
+            Love targetLove = loveTarget.GetComponent<Love>();
+            ani.SetBool("Hug",true);
+            targetLove.ani.SetBool("Hug",true);
+            Debug.Log("Hug");
+                hug=false;
+                targetLove.hug=false;
+                if(bigHeart == null && targetLove.bigHeart==null)
+                    bigHeart =Instantiate(bigHeartPrefab,((this.transform.position+targetLove.transform.position)/2),this.transform.rotation).GetComponent<BigHeart>();
+                    if(interest!=targetLove.interest) 
+                    {
+                        bigHeart.Broken(true);
+                    }
+                    else
+                    {
+                        bigHeart.Broken(false);
+                    }
+            }
+
         }
     }
 
