@@ -75,6 +75,7 @@ public class BigHeart : MonoBehaviour
         else
         {
             partical.SetActive(true);
+            canRotate=true;
             LevelManager.Instance.currentScore=LevelManager.Instance.currentScore+1;
             Debug.Log("Score+1");
         }
