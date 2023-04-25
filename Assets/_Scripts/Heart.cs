@@ -9,6 +9,7 @@ public class Heart : MonoBehaviour
     [SerializeField] GameObject heart;
     public Transform target;
     private Love targetLove;
+    [SerializeField]AudioClip aC;
 
     Material heartMat;
     private void Awake() {
@@ -19,6 +20,9 @@ public class Heart : MonoBehaviour
     }
      void OnEnable() 
      {
+        AudioSource aS= this.gameObject.AddComponent<AudioSource>();
+                aS.clip=aC;
+                aS.Play();
         heartMat.DOVector(new Vector3(0,0,0),"_Dissolve_Dir",2f);
         heartMat.DOFade(.1f,"_BaseColor",2f);
     }

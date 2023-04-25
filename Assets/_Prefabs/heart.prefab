@@ -131,3 +131,4 @@ MonoBehaviour:
   rotateSpeed: 100
   heart: {fileID: 4049516877095261515}
   target: {fileID: 0}
+  aC: {fileID: 8300000, guid: c8fbecf717652544b944e6eb98e28752, type: 3}
